@@ -3,6 +3,30 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.sang.mapper.UserMapper">
+    <resultMap id="UserMap" type="org.sang.bean.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+        <result column="tag" jdbcType="VARCHAR" property="tag" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+        <result column="openid" jdbcType="VARCHAR" property="openid" />
+        <result column="created" jdbcType="TIMESTAMP" property="created" />
+        <result column="score" jdbcType="VARCHAR" property="score" />
+        <collection property="roles"  ofType="org.sang.bean.Role">
+            <id column="rid" jdbcType="INTEGER" property="rid"></id>
+            <result column="rname" jdbcType="VARCHAR" property="rname"></result>
+            <collection property="permissions" ofType="org.sang.bean.Permission">
+                <id column="pid" jdbcType="INTEGER" property="pid"></id>
+                <result column="pname" jdbcType="VARCHAR" property="pname"></result>
+                <result column="url" jdbcType="VARCHAR" property="url"></result>
+            </collection>
+        </collection>
+    </resultMap>
+
     <select id="loadUserByUsername" resultType="org.sang.bean.User">
         SELECT * FROM user WHERE username=#{username}
     </select>
