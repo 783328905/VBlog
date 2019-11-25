@@ -13,13 +13,13 @@
       <el-card style="width:330px;margin-top: 10px;" v-for="(user,index) in users" :key="index"
                v-loading="cardloading[index]">
         <div slot="header" style="text-align: left">
-          <span>{{user.nickname}}</span>
+          <span>{{user.name}}</span>
           <el-button style="float: right; padding: 3px 0;color: #ff0509" type="text" icon="el-icon-delete"
                      @click="deleteUser(user.id)">删除
           </el-button>
         </div>
         <div>
-          <div><img :src="user.userface" :alt="user.nickname" style="width: 70px;height: 70px"></div>
+          <div><img :src="user.avatar" :alt="user.name" style="width: 70px;height: 70px"></div>
           <div style="text-align: left;color:#20a0ff;font-size: 12px;margin-top: 13px">
             <span>用户名:</span><span>{{user.username}}</span>
           </div>
@@ -27,7 +27,7 @@
             <span>电子邮箱:</span><span>{{user.email}}</span>
           </div>
           <div style="text-align: left;color:#20a0ff;font-size: 12px;margin-top: 13px">
-            <span>注册时间:</span><span>{{user.regTime | formatDateTime}}</span>
+            <span>注册时间:</span><span>{{user.created | formatDateTime}}</span>
           </div>
           <div
             style="text-align: left;color:#20a0ff;font-size: 12px;margin-top: 13px;display: flex;align-items: center">
@@ -43,12 +43,12 @@
           <div style="text-align: left;color:#20a0ff;font-size: 12px;margin-top: 13px">
             <span>用户角色:</span>
             <el-tag
-              v-for="role in user.roles"
-              :key="role.id"
+              v-for="(role,index) in user.roles"
+              :key="role.rid"
               size="mini"
               style="margin-right: 8px"
               type="success">
-              {{role.name}}
+              {{role.rname}}
             </el-tag>
             <el-popover
               placement="right"
@@ -57,12 +57,12 @@
               :key="index+''+user.id"
               @hide="saveRoles(user.id,index)"
               trigger="click" v-loading="eploading[index]">
-              <el-select v-model="roles" :key="user.id" multiple placeholder="请选择" size="mini">
+              <el-select v-model="roles" multiple placeholder="请选择" size="mini">
                 <el-option
                   v-for="(item,index) in allRoles"
-                  :key="user.id+'-'+item.id"
-                  :label="item.name"
-                  :value="item.id">
+                  :key="item.rid"
+                  :label="item.rname"
+                  :value="item.rid">
                 </el-option>
               </el-select>
               <el-button type="text" icon="el-icon-more" style="padding-top: 0px" slot="reference"

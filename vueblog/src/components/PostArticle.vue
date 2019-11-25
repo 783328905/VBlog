@@ -5,7 +5,7 @@
         <el-option
           v-for="item in categories"
           :key="item.id"
-          :label="item.cateName"
+          :label="item.name"
           :value="item.id">
         </el-option>
       </el-select>
@@ -32,7 +32,7 @@
     <el-main class="main">
       <div id="editor">
         <mavon-editor style="height: 100%;width: 100%;" ref=md @imgAdd="imgAdd"
-                      @imgDel="imgDel" v-model="article.mdContent"></mavon-editor>
+                      @imgDel="imgDel" v-model="article.content"></mavon-editor>
       </div>
       <div style="display: flex;align-items: center;margin-top: 15px;justify-content: flex-end">
         <el-button @click="cancelEdit" v-if="from!=undefined">放弃修改</el-button>
@@ -58,7 +58,7 @@
   // 可以通过 mavonEditor.markdownIt 获取解析器markdown-it对象
   import 'mavon-editor/dist/css/index.css'
   import {isNotNullORBlank} from '../utils/utils'
-
+  import axios from 'axios'
   export default {
     mounted: function () {
       this.getCategories();
@@ -73,7 +73,7 @@
           _this.loading = false;
           if (resp.status == 200) {
             _this.article = resp.data;
-            var tags = resp.data.tags;
+            var tags = resp.data.tags.split(',');
             _this.article.dynamicTags = []
             for (var i = 0; i < tags.length; i++) {
               _this.article.dynamicTags.push(tags[i].tagName)
@@ -95,21 +95,25 @@
         this.$router.go(-1)
       },
       saveBlog(state){
-        if (!(isNotNullORBlank(this.article.title, this.article.mdContent, this.article.cid))) {
+        if (!(isNotNullORBlank(this.article.title, this.article.content, this.article.cid))) {
           this.$message({type: 'error', message: '数据不能为空!'});
           return;
         }
         var _this = this;
         _this.loading = true;
-        postRequest("/article/", {
-          id: _this.article.id,
+        let dataBlog = {
+
+          id : _this.article.id,
           title: _this.article.title,
-          mdContent: _this.article.mdContent,
+          content: _this.article.content,
           htmlContent: _this.$refs.md.d_render,
-          cid: _this.article.cid,
+          catalog: {id:_this.article.cid},
           state: state,
-          dynamicTags: _this.article.dynamicTags
-        }).then(resp=> {
+            tags: _this.article.dynamicTags.join(',')+','
+
+        };
+
+        axios.post("/article/",  dataBlog).then(resp=> {
           _this.loading = false;
           if (resp.status == 200 && resp.data.status == 'success') {
             _this.article.id = resp.data.msg;
@@ -179,7 +183,7 @@
           id: '-1',
           dynamicTags: [],
           title: '',
-          mdContent: '',
+          content: '',
           cid: ''
         }
       }

@@ -22,11 +22,11 @@ public class UserController {
 
     @RequestMapping("/currentUserName")
     public String currentUserName() {
-        return Util.getCurrentUser().getNickname();
+        return Util.getCurrentUser().getUsername();
     }
 
     @RequestMapping("/currentUserId")
-    public Long currentUserId() {
+    public Integer currentUserId() {
         return Util.getCurrentUser().getId();
     }
 
@@ -39,7 +39,7 @@ public class UserController {
     public Boolean isAdmin() {
         List<GrantedAuthority> authorities = Util.getCurrentUser().getAuthorities();
         for (GrantedAuthority authority : authorities) {
-            if (authority.getAuthority().contains("超级管理员")) {
+            if (authority.getAuthority().contains("ROLE_ADMIN")) {
                 return true;
             }
         }

@@ -1,14 +1,15 @@
 package org.sang.controller;
 
-import org.sang.bean.Category;
+import org.sang.bean.Catalog;
 import org.sang.bean.RespBean;
-import org.sang.service.CategoryService;
+import org.sang.service.CatalogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,18 +17,18 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/admin/category")
-public class CategoryController {
+public class CatalogController {
     @Autowired
-    CategoryService categoryService;
+    CatalogService catalogService;
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<Category> getAllCategories() {
-        return categoryService.getAllCategories();
+    public List<Catalog> getAllCategories() {
+        return catalogService.getAllCategories();
     }
 
     @RequestMapping(value = "/{ids}", method = RequestMethod.DELETE)
     public RespBean deleteById(@PathVariable String ids) {
-        boolean result = categoryService.deleteCategoryByIds(ids);
+        boolean result = catalogService.deleteCategoryByIds(ids);
         if (result) {
             return new RespBean("success", "删除成功!");
         }
@@ -35,8 +36,9 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public RespBean addNewCate(Category category) {
-        int result = categoryService.addCategory(category);
+    public RespBean addNewCate(Catalog catalog) {
+        catalog.setCreateTime(new Date());
+        int result = catalogService.addCategory(catalog);
         if (result == 1) {
             return new RespBean("success", "添加成功!");
         }
@@ -44,8 +46,8 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public RespBean updateCate(Category category) {
-        int i = categoryService.updateCategoryById(category);
+    public RespBean updateCate(Catalog catalog) {
+        int i = catalogService.updateCategoryById(catalog);
         if (i == 1) {
             return new RespBean("success", "修改成功!");
         }

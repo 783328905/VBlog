@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.CatalogMapper">
+    <resultMap id="BaseResultMap" type="org.sang.bean.Catalog">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    </resultMap>
+    <select id="getAllCatalogs" resultMap="BaseResultMap">
+        SELECT * FROM catalog
+    </select>
+    <delete id="deleteCatalogByIds">
+        DELETE FROM catalog WHERE id IN
+        <foreach collection="ids" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+    <update id="updateCatalogById" parameterType="org.sang.bean.Catalog">
+        UPDATE catalog SET name=#{name} WHERE id=#{id}
+    </update>
+    <insert id="addCatalog" parameterType="org.sang.bean.Catalog">
+        INSERT INTO catalog SET name=#{catalog.name},user_id=#{user.id},create_time = #{catalog.createTime}
+    </insert>
+</mapper>

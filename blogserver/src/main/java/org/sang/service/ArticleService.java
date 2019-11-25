@@ -1,8 +1,10 @@
 package org.sang.service;
 
 import org.sang.bean.Article;
+import org.sang.bean.User;
 import org.sang.mapper.ArticleMapper;
 import org.sang.mapper.TagsMapper;
+import org.sang.type.ArticleSourceType;
 import org.sang.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by sang on 2017/12/20.
@@ -24,52 +29,36 @@ public class ArticleService {
     TagsMapper tagsMapper;
 
     public int addNewArticle(Article article) {
+        System.out.println(article.toString());
         //处理文章摘要
         if (article.getSummary() == null || "".equals(article.getSummary())) {
             //直接截取
             String stripHtml = stripHtml(article.getHtmlContent());
             article.setSummary(stripHtml.substring(0, stripHtml.length() > 50 ? 50 : stripHtml.length()));
+
         }
         if (article.getId() == -1) {
             //添加操作
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            if (article.getState() == 1) {
-                //设置发表日期
-                article.setPublishDate(timestamp);
-            }
-            article.setEditTime(timestamp);
+
+            article.setCreateTime(timestamp);
+            article.setSourceType(ArticleSourceType.backend);
             //设置当前用户
-            article.setUid(Util.getCurrentUser().getId());
+            article.setUser(new User(Util.getCurrentUser().getId()));
             int i = articleMapper.addNewArticle(article);
-            //打标签
-            String[] dynamicTags = article.getDynamicTags();
-            if (dynamicTags != null && dynamicTags.length > 0) {
-                int tags = addTagsToArticle(dynamicTags, article.getId());
-                if (tags == -1) {
-                    return tags;
-                }
-            }
+
+
             return i;
         } else {
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            if (article.getState() == 1) {
-                //设置发表日期
-                article.setPublishDate(timestamp);
-            }
+            article.setUpdateTime(timestamp);
             //更新
-            article.setEditTime(new Timestamp(System.currentTimeMillis()));
             int i = articleMapper.updateArticle(article);
-            //修改标签
-            String[] dynamicTags = article.getDynamicTags();
-            if (dynamicTags != null && dynamicTags.length > 0) {
-                int tags = addTagsToArticle(dynamicTags, article.getId());
-                if (tags == -1) {
-                    return tags;
-                }
-            }
+
             return i;
         }
     }
+
 
     private int addTagsToArticle(String[] dynamicTags, Long aid) {
         //1.删除该文章目前所有的标签
@@ -91,9 +80,9 @@ public class ArticleService {
     }
 
     public List<Article> getArticleByState(Integer state, Integer page, Integer count,String keywords) {
+
         int start = (page - 1) * count;
-        Long uid = Util.getCurrentUser().getId();
-        return articleMapper.getArticleByState(state, start, count, uid,keywords);
+        return articleMapper.getArticleByState(state, start, count,keywords);
     }
 
 //    public List<Article> getArticleByStateByAdmin(Integer page, Integer count,String keywords) {
@@ -101,11 +90,11 @@ public class ArticleService {
 //        return articleMapper.getArticleByStateByAdmin(start, count,keywords);
 //    }
 
-    public int getArticleCountByState(Integer state, Long uid,String keywords) {
+    public int getArticleCountByState(Integer state, Integer uid,String keywords) {
         return articleMapper.getArticleCountByState(state, uid,keywords);
     }
 
-    public int updateArticleState(Long[] aids, Integer state) {
+    public int updateArticleState(Integer[] aids, Integer state) {
         if (state == 2) {
             return articleMapper.deleteArticleById(aids);
         } else {
@@ -113,7 +102,7 @@ public class ArticleService {
         }
     }
 
-    public Article getArticleById(Long aid) {
+    public Article getArticleById(Integer aid) {
         Article article = articleMapper.getArticleById(aid);
         articleMapper.pvIncrement(aid);
         return article;

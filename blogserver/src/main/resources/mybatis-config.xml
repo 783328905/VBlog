@@ -4,4 +4,11 @@
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
+
+    <typeAliases>
+        <typeAlias alias="ArticleSourceType" type="org.sang.type.ArticleSourceType"/>
+    </typeAliases>
+    <typeHandlers>
+        <typeHandler handler="org.sang.handler.GenericEnumTypeHandler" javaType="org.sang.type.ArticleSourceType"/>
+    </typeHandlers>
 </configuration>

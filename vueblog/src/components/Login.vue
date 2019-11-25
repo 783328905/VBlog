@@ -26,8 +26,8 @@
         },
         checked: true,
         loginForm: {
-          username: 'sang',
-          password: '123'
+          username: 'test',
+          password: 'test'
         },
         loading: false
       }

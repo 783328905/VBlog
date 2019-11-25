@@ -17,19 +17,19 @@ public interface UserMapper {
 
     long reg(User user);
 
-    int updateUserEmail(@Param("email") String email, @Param("id") Long id);
+    int updateUserEmail(@Param("email") String email, @Param("id") Integer id);
 
     List<User> getUserByNickname(@Param("nickname") String nickname);
 
     List<Role> getAllRole();
 
-    int updateUserEnabled(@Param("enabled") Boolean enabled, @Param("uid") Long uid);
+    int updateUserEnabled(@Param("enabled") Boolean enabled, @Param("uid") Integer uid);
 
-    int deleteUserById(Long uid);
+    int deleteUserById(Integer uid);
 
-    int deleteUserRolesByUid(Long id);
+    int deleteUserRolesByUid(Integer id);
 
-    int setUserRoles(@Param("rids") Long[] rids, @Param("id") Long id);
+    int setUserRoles(@Param("rids") Integer[] rids, @Param("id") Integer id);
 
-    User getUserById(@Param("id") Long id);
+    User getUserById(@Param("id") Integer id);
 }

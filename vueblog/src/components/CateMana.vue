@@ -25,13 +25,14 @@
         </el-table-column>
         <el-table-column
           label="栏目名称"
-          prop="cateName"
-          width="120" align="left">
+          prop="name"
+          width="240" align="left">
         </el-table-column>
         <el-table-column
-          prop="date"
-          label="启用时间" align="left">
-          <template slot-scope="scope">{{ scope.row.date | formatDate}}</template>
+          label="启用时间"
+          prop="createTime"
+           align="left">
+          <template slot-scope="scope">{{ scope.row.createTime | formatDate}}</template>
         </el-table-column>
         <el-table-column label="操作" align="left">
           <template slot-scope="scope">
@@ -63,7 +64,7 @@
       addNewCate(){
         this.loading = true;
         var _this = this;
-        postRequest('/admin/category/', {cateName: this.cateName}).then(resp=> {
+        postRequest('/admin/category/', {name: this.cateName}).then(resp=> {
           if (resp.status == 200) {
             var json = resp.data;
             _this.$message({type: json.status, message: json.msg});
@@ -117,7 +118,7 @@
             });
           } else {
             _this.loading = true;
-            putRequest("/admin/category/", {id: row.id, cateName: value}).then(resp=> {
+            putRequest("/admin/category/", {id: row.id, name: value}).then(resp=> {
               var json = resp.data;
               _this.$message({
                 type: json.status,
@@ -138,7 +139,7 @@
       },
       handleDelete(index, row){
         let _this = this;
-        this.$confirm('确认删除 ' + row.cateName + ' ?', '提示', {
+        this.$confirm('确认删除 ' + row.name + ' ?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'

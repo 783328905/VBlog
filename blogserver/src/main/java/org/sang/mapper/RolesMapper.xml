@@ -3,13 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.sang.mapper.RolesMapper">
+    <resultMap id="BaseResultMap" type="org.sang.bean.Role">
+        <id column="rid" jdbcType="INTEGER" property="rid" />
+        <result column="rname" jdbcType="VARCHAR" property="rname" />
+    </resultMap>
+
     <insert id="addRoles">
-        INSERT INTO roles_user VALUES
+        INSERT INTO user_role VALUES
         <foreach collection="roles" item="role" separator=",">
             (null,#{role},#{uid})
         </foreach>
     </insert>
-    <select id="getRolesByUid" parameterType="long" resultType="org.sang.bean.Role">
-        SELECT r.* FROM roles r,roles_user ru WHERE r.`id`=ru.`rid` AND ru.`uid`=#{uid}
+    <select id="getRolesByUid" parameterType="Integer" resultType="org.sang.bean.Role">
+        SELECT r.* FROM role r,user_role ru WHERE r.`rid`=ru.`rid` AND ru.`id`=#{uid}
     </select>
 </mapper>

@@ -27,47 +27,40 @@
         </collection>
     </resultMap>
 
-    <select id="loadUserByUsername" resultType="org.sang.bean.User">
-        SELECT * FROM user WHERE username=#{username}
+    <select id="loadUserByUsername" resultMap="UserMap">
+         select user.*,role.*,permission.* from user INNER join user_role on user.id=user_role.id
+      INNER JOIN role on user_role.rid = role.rid
+     INNER JOIN role_permission on role.rid = role_permission.rid
+      INNER JOIN permission on role_permission.pid = permission.pid
+      where username=#{username}
     </select>
     <insert id="reg" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO user set username=#{username},password=#{password},nickname=#{nickname}
+        INSERT INTO user set username=#{username},password=#{password},name=#{nickname}
     </insert>
     <update id="updateUserEmail">
         UPDATE user set email=#{email} WHERE id=#{id}
     </update>
-    <select id="getUserByNickname" resultMap="BaseResultMap">
-        SELECT u.*,r.`id` AS rid,r.`name` AS rname FROM user u,roles r,roles_user ru WHERE u.`id`=ru.`uid` AND
-        r.`id`=ru.`rid` AND u.`id` NOT IN(SELECT u.`id` FROM user u,roles_user ru WHERE u.`id`=ru.`uid` AND ru.`rid`=1)
+    <select id="getUserByNickname" resultMap="UserMap">
+        SELECT u.*,r.* FROM user u,role r,
+        user_role ru WHERE u.`id`=ru.`id` AND
+        r.`rid`=ru.`rid` AND u.`id` NOT IN(SELECT u.`id` FROM user u,
+        user_role ru WHERE u.`id`=ru.`id` AND ru.`rid`=1)
         <choose>
             <when test="nickname!=null and nickname!=''">
-                and u.nickname like concat('%',#{nickname},'%') ORDER BY u.`id`
+                and u.name like concat('%',#{nickname},'%') ORDER BY u.`id`
             </when>
             <otherwise>
                 ORDER BY u.`id` limit 20
             </otherwise>
         </choose>
     </select>
-    <select id="getUserById" resultMap="BaseResultMap">
-        SELECT u.*,r.`id` AS rid,r.`name` AS rname FROM user u,roles r,roles_user ru WHERE u.`id`=ru.`uid` AND
-        r.`id`=ru.`rid` AND u.`id`=#{id}
+    <select id="getUserById" resultMap="UserMap">
+           SELECT u.*,r.* FROM user u,role r,user_role ru WHERE u.`id`=ru.`id` AND
+        r.`rid`=ru.`rid` AND u.`id`=#{id}
     </select>
-    <resultMap id="BaseResultMap" type="org.sang.bean.User">
-        <id column="id" property="id"/>
-        <result column="username" property="username"/>
-        <result column="nickname" property="nickname"/>
-        <result column="password" property="password"/>
-        <result column="enabled" property="enabled"/>
-        <result column="email" property="email"/>
-        <result column="userface" property="userface"/>
-        <result column="regTime" property="regTime"/>
-        <collection property="roles" ofType="org.sang.bean.Role">
-            <id column="rid" property="id"/>
-            <result column="rname" property="name"/>
-        </collection>
-    </resultMap>
+
     <select id="getAllRole" resultType="org.sang.bean.Role">
-        select * from roles;
+        select * from role;
     </select>
     <update id="updateUserEnabled">
         UPDATE user set enabled=#{enabled} WHERE id=#{uid}
@@ -76,12 +69,12 @@
         DELETE FROM user WHERE id=#{id}
     </delete>
     <delete id="deleteUserRolesByUid">
-        DELETE FROM roles_user WHERE uid=#{id}
+        DELETE FROM user_role WHERE id=#{id}
     </delete>
     <insert id="setUserRoles">
-        INSERT INTO roles_user(rid,uid) VALUES
+        INSERT INTO user_role(id,rid) VALUES
         <foreach collection="rids" separator="," item="rid">
-            (#{rid},#{id})
+            (#{id},#{rid})
         </foreach>
     </insert>
 </mapper>

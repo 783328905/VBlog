@@ -1,35 +1,50 @@
 package org.sang.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.security.core.GrantedAuthority;
+
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by sang on 2017/12/17.
  */
-public class Role {
-    private Long id;
-    private String name;
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class Role implements Serializable,GrantedAuthority {
+    private int rid;
+    private String rname;
+    private List<Permission> permissions;
 
-    public Role() {
+    public int getRid() {
+        return rid;
     }
 
-    public Long getId() {
-
-        return id;
+    public void setRid(int rid) {
+        this.rid = rid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getRname() {
+        return rname;
     }
 
-    public String getName() {
-        return name;
+    public void setRname(String rname) {
+        this.rname = rname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public List<Permission> getPermissions() {
+        return permissions;
     }
 
-    public Role(Long id, String name) {
+    public void setPermissions(List<Permission> permissions) {
+        this.permissions = permissions;
+    }
 
-        this.id = id;
-        this.name = name;
+    @Override
+    public String getAuthority() {
+        return rname;
     }
 }

@@ -27,7 +27,7 @@ public class UserManaController {
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-    public User getUserById(@PathVariable Long id) {
+    public User getUserById(@PathVariable Integer id) {
         return userService.getUserById(id);
     }
 
@@ -37,7 +37,7 @@ public class UserManaController {
     }
 
     @RequestMapping(value = "/user/enabled", method = RequestMethod.PUT)
-    public RespBean updateUserEnabled(Boolean enabled, Long uid) {
+    public RespBean updateUserEnabled(Boolean enabled, Integer uid) {
         if (userService.updateUserEnabled(enabled, uid) == 1) {
             return new RespBean("success", "更新成功!");
         } else {
@@ -46,7 +46,7 @@ public class UserManaController {
     }
 
     @RequestMapping(value = "/user/{uid}", method = RequestMethod.DELETE)
-    public RespBean deleteUserById(@PathVariable Long uid) {
+    public RespBean deleteUserById(@PathVariable Integer uid) {
         if (userService.deleteUserById(uid) == 1) {
             return new RespBean("success", "删除成功!");
         } else {
@@ -55,7 +55,7 @@ public class UserManaController {
     }
 
     @RequestMapping(value = "/user/role", method = RequestMethod.PUT)
-    public RespBean updateUserRoles(Long[] rids, Long id) {
+    public RespBean updateUserRoles(Integer[] rids, Integer id) {
         if (userService.updateUserRoles(rids, id) == rids.length) {
             return new RespBean("success", "更新成功!");
         } else {

@@ -1,82 +1,41 @@
 package org.sang.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.ToString;
+import org.sang.type.ArticleSourceType;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Created by sang on 2017/12/20.
  */
 public class Article {
-    private Long id;
+    private Integer id;
     private String title;
-    private String mdContent;
+    private String content;
     private String htmlContent;
     private String summary;
-    private Long cid;
-    private Long uid;
-    private Timestamp publishDate;
-    private Integer state;
-    private Integer pageView;
-    private Timestamp editTime;
-    private String[] dynamicTags;
-    private String nickname;
-    private String cateName;
-    private List<Tags> tags;
-    private String stateStr;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date createTime ;
+    private Integer readSize =0;
+    private Integer commentSize =0;
+    private Integer voteSize =0;
+    private String tags="";
+    private Catalog catalog;
+    private User user;
+    private Integer state=1;     //-1，0，1
+    private Date updateTime;
+    private ArticleSourceType SourceType;
 
-    public String getStateStr() {
-        return stateStr;
-    }
-
-    public void setStateStr(String stateStr) {
-        this.stateStr = stateStr;
-    }
-
-    public List<Tags> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tags> tags) {
-        this.tags = tags;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public String getCateName() {
-        return cateName;
-    }
-
-    public void setCateName(String cateName) {
-        this.cateName = cateName;
-    }
-
-    public String[] getDynamicTags() {
-        return dynamicTags;
-    }
-
-    public void setDynamicTags(String[] dynamicTags) {
-        this.dynamicTags = dynamicTags;
-    }
-
-    public Timestamp getEditTime() {
-        return editTime;
-    }
-
-    public void setEditTime(Timestamp editTime) {
-        this.editTime = editTime;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -88,12 +47,12 @@ public class Article {
         this.title = title;
     }
 
-    public String getMdContent() {
-        return mdContent;
+    public String getContent() {
+        return content;
     }
 
-    public void setMdContent(String mdContent) {
-        this.mdContent = mdContent;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getHtmlContent() {
@@ -112,28 +71,60 @@ public class Article {
         this.summary = summary;
     }
 
-    public Long getCid() {
-        return cid;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCid(Long cid) {
-        this.cid = cid;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Long getUid() {
-        return uid;
+    public Integer getReadSize() {
+        return readSize;
     }
 
-    public void setUid(Long uid) {
-        this.uid = uid;
+    public void setReadSize(Integer readSize) {
+        this.readSize = readSize;
     }
 
-    public Timestamp getPublishDate() {
-        return publishDate;
+    public Integer getCommentSize() {
+        return commentSize;
     }
 
-    public void setPublishDate(Timestamp publishDate) {
-        this.publishDate = publishDate;
+    public void setCommentSize(Integer commentSize) {
+        this.commentSize = commentSize;
+    }
+
+    public Catalog getCatalog() {
+        return catalog;
+    }
+
+    public void setCatalog(Catalog catalog) {
+        this.catalog = catalog;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    public Integer getVoteSize() {
+        return voteSize;
+    }
+
+    public void setVoteSize(Integer voteSize) {
+        this.voteSize = voteSize;
     }
 
     public Integer getState() {
@@ -144,11 +135,41 @@ public class Article {
         this.state = state;
     }
 
-    public Integer getPageView() {
-        return pageView;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setPageView(Integer pageView) {
-        this.pageView = pageView;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public ArticleSourceType getSourceType() {
+        return SourceType;
+    }
+
+    public void setSourceType(ArticleSourceType sourceType) {
+        SourceType = sourceType;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", htmlContent='" + htmlContent + '\'' +
+                ", summary='" + summary + '\'' +
+                ", createTime=" + createTime +
+                ", readSize=" + readSize +
+                ", commentSize=" + commentSize +
+                ", voteSize=" + voteSize +
+                ", tags='" + tags + '\'' +
+                ", catalog=" + catalog +
+                ", user=" + user +
+                ", state=" + state +
+                ", updateTime=" + updateTime +
+                ", SourceType=" + SourceType +
+                '}';
     }
 }

@@ -39,15 +39,15 @@
       </el-table-column>
       <el-table-column
         label="最近编辑时间" width="140" align="left">
-        <template slot-scope="scope">{{ scope.row.editTime | formatDateTime}}</template>
+        <template slot-scope="scope">{{ scope.row.createTime | formatDateTime}}</template>
       </el-table-column>
       <el-table-column
-        prop="nickname"
+        prop="user.username"
         label="作者"
         width="120" align="left">
       </el-table-column>
       <el-table-column
-        prop="cateName"
+        prop="catalog.name"
         label="所属分类"
         width="120" align="left">
       </el-table-column>

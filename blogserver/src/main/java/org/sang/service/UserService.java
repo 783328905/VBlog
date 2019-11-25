@@ -5,7 +5,10 @@ import org.sang.bean.User;
 import org.sang.mapper.RolesMapper;
 import org.sang.mapper.UserMapper;
 import org.sang.utils.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -21,6 +24,9 @@ import java.util.List;
 @Service
 @Transactional
 public class UserService implements UserDetailsService {
+
+    private Logger logger = LoggerFactory.getLogger(UserService.class);
+
     @Autowired
     UserMapper userMapper;
     @Autowired
@@ -34,8 +40,15 @@ public class UserService implements UserDetailsService {
             return new User();
         }
         //查询用户的角色信息，并返回存入user中
-        List<Role> roles = rolesMapper.getRolesByUid(user.getId());
-        user.setRoles(roles);
+        //List<Role> roles = rolesMapper.getRolesByUid(user.getId());
+        //user.setRoles(roles);
+        logger.info(user.toString());
+
+        List<GrantedAuthority> authorities = user.getAuthorities();
+        for(GrantedAuthority authority:authorities){
+            System.out.println("-----------"+authority);
+        }
+
         return user;
     }
 
@@ -52,12 +65,12 @@ public class UserService implements UserDetailsService {
         }
         //插入用户,插入之前先对密码进行加密
         user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
-        user.setEnabled(true);//用户可用
+        //user.setEnabled(true);//用户可用
         long result = userMapper.reg(user);
         //配置用户的角色，默认都是普通用户
-        String[] roles = new String[]{"2"};
-        int i = rolesMapper.addRoles(roles, user.getId());
-        boolean b = i == roles.length && result == 1;
+        Integer rid = 3;
+        int i = rolesMapper.addRoles(rid, user.getId());
+        boolean b = i == 1 && result == 1;
         if (b) {
             return 0;
         } else {
@@ -78,20 +91,20 @@ public class UserService implements UserDetailsService {
         return userMapper.getAllRole();
     }
 
-    public int updateUserEnabled(Boolean enabled, Long uid) {
+    public int updateUserEnabled(Boolean enabled, Integer uid) {
         return userMapper.updateUserEnabled(enabled, uid);
     }
 
-    public int deleteUserById(Long uid) {
+    public int deleteUserById(Integer uid) {
         return userMapper.deleteUserById(uid);
     }
 
-    public int updateUserRoles(Long[] rids, Long id) {
+    public int updateUserRoles(Integer[] rids, Integer id) {
         int i = userMapper.deleteUserRolesByUid(id);
         return userMapper.setUserRoles(rids, id);
     }
 
-    public User getUserById(Long id) {
+    public User getUserById(Integer id) {
         return userMapper.getUserById(id);
     }
 }

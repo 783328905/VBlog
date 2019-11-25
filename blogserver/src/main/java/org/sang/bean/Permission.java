@@ -1,4 +1,4 @@
-package com.ctillnow.entry;
+package org.sang.bean;
 
 import lombok.*;
 

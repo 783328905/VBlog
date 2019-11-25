@@ -29,12 +29,12 @@ public class ArticleController {
     ArticleService articleService;
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public RespBean addNewArticle(Article article) {
+    public RespBean addNewArticle(@RequestBody Article article) {
         int result = articleService.addNewArticle(article);
         if (result == 1) {
             return new RespBean("success", article.getId() + "");
         } else {
-            return new RespBean("error", article.getState() == 0 ? "文章保存失败!" : "文章发表失败!");
+            return new RespBean("error",  "文章保存失败!");
         }
     }
 
@@ -75,18 +75,19 @@ public class ArticleController {
         int totalCount = articleService.getArticleCountByState(state, Util.getCurrentUser().getId(),keywords);
         List<Article> articles = articleService.getArticleByState(state, page, count,keywords);
         Map<String, Object> map = new HashMap<>();
+        System.out.println("------------------------"+articles.get(0).getUser().getUsername());
         map.put("totalCount", totalCount);
         map.put("articles", articles);
         return map;
     }
 
     @RequestMapping(value = "/{aid}", method = RequestMethod.GET)
-    public Article getArticleById(@PathVariable Long aid) {
+    public Article getArticleById(@PathVariable Integer aid) {
         return articleService.getArticleById(aid);
     }
 
     @RequestMapping(value = "/dustbin", method = RequestMethod.PUT)
-    public RespBean updateArticleState(Long[] aids, Integer state) {
+    public RespBean updateArticleState(Integer[] aids, Integer state) {
         if (articleService.updateArticleState(aids, state) == aids.length) {
             return new RespBean("success", "删除成功!");
         }
