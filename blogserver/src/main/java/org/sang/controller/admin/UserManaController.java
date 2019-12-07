@@ -23,7 +23,8 @@ public class UserManaController {
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public List<User> getUserByNickname(String nickname) {
-        return userService.getUserByNickname(nickname);
+        List<User> users = userService.getUserByNickname(nickname);
+        return users;
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
@@ -37,11 +38,11 @@ public class UserManaController {
     }
 
     @RequestMapping(value = "/user/enabled", method = RequestMethod.PUT)
-    public RespBean updateUserEnabled(Boolean enabled, Integer uid) {
-        if (userService.updateUserEnabled(enabled, uid) == 1) {
-            return new RespBean("success", "更新成功!");
+    public RespBean updateUserEnabled(Boolean enabled, String username, String dateString) {
+        if (userService.updateUserEnabled(enabled, username,dateString) == 1) {
+            return new RespBean("success", "该账户已被封停!");
         } else {
-            return new RespBean("error", "更新失败!");
+            return new RespBean("error", "封禁失败!");
         }
     }
 

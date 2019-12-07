@@ -4,6 +4,7 @@ import org.apache.commons.io.IOUtils;
 import org.sang.bean.Article;
 import org.sang.bean.RespBean;
 import org.sang.service.ArticleService;
+import org.sang.utils.IPUtil;
 import org.sang.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -75,16 +76,20 @@ public class ArticleController {
         int totalCount = articleService.getArticleCountByState(state, Util.getCurrentUser().getId(),keywords);
         List<Article> articles = articleService.getArticleByState(state, page, count,keywords);
         Map<String, Object> map = new HashMap<>();
-        System.out.println("------------------------"+articles.get(0).getUser().getUsername());
+        //System.out.println("------------------------"+articles.get(0).getUser().getUsername());
         map.put("totalCount", totalCount);
         map.put("articles", articles);
         return map;
     }
 
     @RequestMapping(value = "/{aid}", method = RequestMethod.GET)
-    public Article getArticleById(@PathVariable Integer aid) {
+    public Article getArticleById(@PathVariable Integer aid,HttpServletRequest request) {
+        String ipAddr = IPUtil.getIpAddr(request);
+
         return articleService.getArticleById(aid);
     }
+
+
 
     @RequestMapping(value = "/dustbin", method = RequestMethod.PUT)
     public RespBean updateArticleState(Integer[] aids, Integer state) {

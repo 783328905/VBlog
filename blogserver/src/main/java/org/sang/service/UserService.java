@@ -4,6 +4,8 @@ import org.sang.bean.Role;
 import org.sang.bean.User;
 import org.sang.mapper.RolesMapper;
 import org.sang.mapper.UserMapper;
+import org.sang.utils.DateUtils;
+import org.sang.utils.RedisUtil;
 import org.sang.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +33,9 @@ public class UserService implements UserDetailsService {
     UserMapper userMapper;
     @Autowired
     RolesMapper rolesMapper;
+    @Autowired
+    RedisUtil redisUtil;
+
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
@@ -46,8 +51,12 @@ public class UserService implements UserDetailsService {
 
         List<GrantedAuthority> authorities = user.getAuthorities();
         for(GrantedAuthority authority:authorities){
-            System.out.println("-----------"+authority);
+            logger.info("{}",authority);
         }
+        user.setAccountNonExpired(true);
+        user.setCredentialsNonExpired(true);
+        user.setAccountNonLocked(true);
+        user.setEnabled(true);
 
         return user;
     }
@@ -84,6 +93,8 @@ public class UserService implements UserDetailsService {
 
     public List<User> getUserByNickname(String nickname) {
         List<User> list = userMapper.getUserByNickname(nickname);
+        for(User user : list)
+            user.setEnabled( redisUtil.get(user.getUsername()) == null );
         return list;
     }
 
@@ -91,8 +102,22 @@ public class UserService implements UserDetailsService {
         return userMapper.getAllRole();
     }
 
-    public int updateUserEnabled(Boolean enabled, Integer uid) {
-        return userMapper.updateUserEnabled(enabled, uid);
+    public int updateUserEnabled(Boolean enabled, String username ,String dateString) {
+
+        try {
+            if(!enabled){
+                Long t = DateUtils.dateStringToSeconds(dateString);
+                redisUtil.set(username, dateString, t);
+                return 1;
+            }else {
+                redisUtil.del(username);
+                return 1;
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     public int deleteUserById(Integer uid) {
