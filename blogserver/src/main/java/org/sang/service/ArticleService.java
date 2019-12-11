@@ -80,8 +80,9 @@ public class ArticleService {
     }
 
     public List<Article> getArticleByState(Integer state, Integer page, Integer count,String keywords) {
-
-        int start = (page - 1) * count;
+        int start = 0;
+        if(page !=null && count !=null)
+         start = (page - 1) * count;
         return articleMapper.getArticleByState(state, start, count,keywords);
     }
 

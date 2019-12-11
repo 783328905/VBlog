@@ -18,6 +18,8 @@
       </el-input>
       <el-button type="primary" icon="el-icon-search" size="mini" style="margin-left: 3px" @click="searchClick">搜索
       </el-button>
+      <el-button type="primary" icon="el-icon-excel" size="mini" style="margin-left: 3px" @click="excelDownload">导出excel
+      </el-button>
     </div>
     <!--<div style="width: 100%;height: 1px;background-color: #20a0ff;margin-top: 8px;margin-bottom: 0px"></div>-->
     <el-table
@@ -122,6 +124,30 @@
           this.dustbinData.push(selItems[i].id)
         }
         this.deleteToDustBin(selItems[0].state)
+      },
+      excelDownload() {
+        var _this = this;
+        var url = '/article/excel_download?state=' + this.state + "&keywords=" + this.keywords;
+        getRequest(url).then(resp=> {
+        _this.loading = false;
+        if (resp.status == 200) {
+          _this.articles = resp.data.articles;
+          _this.totalCount = resp.data.totalCount;
+        } else {
+          _this.$message({type: 'error', message: '数据加载失败!'});
+        }
+      }, resp=> {
+        _this.loading = false;
+        if (resp.response.status == 403) {
+          _this.$message({type: 'error', message: resp.response.data});
+        } else {
+          _this.$message({type: 'error', message: '数据加载失败!'});
+        }
+      }).catch(resp=> {
+        //压根没见到服务器
+        _this.loading = false;
+        _this.$message({type: 'error', message: '数据加载失败!'});
+      })
       },
       //翻页
       currentChange(currentPage){

@@ -4,6 +4,7 @@ import org.apache.commons.io.IOUtils;
 import org.sang.bean.Article;
 import org.sang.bean.RespBean;
 import org.sang.service.ArticleService;
+import org.sang.utils.ExcelUtil;
 import org.sang.utils.IPUtil;
 import org.sang.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -108,4 +112,16 @@ public class ArticleController {
         map.put("ds", dataStatistics);
         return map;
     }
+
+    @RequestMapping("/excel_download")
+    public void excelDownload(@RequestParam(required = false,defaultValue = "") String keyword, Integer state, HttpServletResponse response) throws IOException {
+        List<Article> articles = articleService.getArticleByState(state, null, null, keyword);
+
+        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(response.getOutputStream());
+        ExcelUtil.toExcel(bufferedOutputStream,articles,new String[]{"id","title","readSize","tags","updateTime"});
+        bufferedOutputStream.flush();
+        bufferedOutputStream.close();
+    }
+
+
 }

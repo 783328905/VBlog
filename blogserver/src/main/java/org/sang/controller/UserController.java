@@ -2,6 +2,7 @@ package org.sang.controller;
 
 import org.sang.bean.RespBean;
 import org.sang.service.UserService;
+import org.sang.utils.RedisUtil;
 import org.sang.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by sang on 2017/12/24.
@@ -19,6 +21,8 @@ public class UserController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    RedisUtil redisUtil;
 
     @RequestMapping("/currentUserName")
     public String currentUserName() {
@@ -52,5 +56,23 @@ public class UserController {
             return new RespBean("success", "开启成功!");
         }
         return new RespBean("error", "开启失败!");
+    }
+
+    @RequestMapping("/rget")
+    public RespBean getRedis(String key){
+        Set<Object> strings = redisUtil.sGet(key);
+        for(Object s :strings){
+            s = (String) s;
+            System.out.println(s);
+        }
+
+
+        return new RespBean();
+    }
+    @RequestMapping("rpush")
+    public RespBean pushRedis(String key,String value){
+        Long l   = new Long(60 * 60 *24L);
+        redisUtil.sSetAndTime(key, l,value);
+        return new RespBean("success","插入成功");
     }
 }

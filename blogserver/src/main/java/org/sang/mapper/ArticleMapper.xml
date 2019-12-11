@@ -68,7 +68,10 @@
         <if test="state!=-1">
           and state=#{state}
         </if>
-        ORDER BY blog.create_time DESC limit #{start},#{count};
+        ORDER BY blog.create_time DESC
+        <if test="start !=null and count!=null">
+        limit #{start},#{count};
+        </if>
     </select>
     <select id="getArticleByStateByAdmin" resultType="org.sang.bean.Article">
         SELECT a.id,a.`title`,a.`editTime`,a.`pageView`,a.`state`,u.`nickname`,c.`cateName`,a.uid FROM article a,user
