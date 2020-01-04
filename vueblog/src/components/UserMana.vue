@@ -187,6 +187,7 @@
             });
 
           }).catch(() => {
+            _this.loading = false;
             this.$message({
               type: 'info',
               message: '操作已取消'
@@ -194,11 +195,11 @@
 
           });
         }else {
-//          this.$confirm('解封该用户, 是否继续?', '提示', {
-//            confirmButtonText: '确定',
-//            cancelButtonText: '取消',
-//            type: 'warning'
-//          }).then(() => {
+          this.$confirm('解封该用户, 是否继续?', '提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+          }).then(() => {
 
             _this.cardloading.splice(index, 1, true);
             putRequest("/admin/user/enabled", {
@@ -215,13 +216,14 @@
               _this.$message({type: 'success', message: '更新成功!'})
             });
 
-//          }).catch(() => {
-//              _this.$message({
-//                type: 'info',
-//                message: '操作已取消'
-//              });
-//
-//            });
+          }).catch(() => {
+              _this.loading = false;
+              _this.$message({
+                type: 'info',
+                message: '操作已取消'
+              });
+
+            });
 
         }
       },
