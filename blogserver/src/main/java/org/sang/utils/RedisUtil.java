@@ -349,7 +349,7 @@ public final class RedisUtil {
      * @param values 值 可以是多个
      * @return 成功个数
      */
-    public long sSet(String key, Object... values) {
+    public long sSet(String key, String... values) {
         try {
             return redisTemplate.opsForSet().add(key, values);
         } catch (Exception e) {
@@ -366,7 +366,7 @@ public final class RedisUtil {
      * @param values 值 可以是多个
      * @return 成功个数
      */
-    public long sSetAndTime(String key, long time, Object... values) {
+    public long sSetAndTime(String key, Long time, String... values) {
         try {
             Long count = redisTemplate.opsForSet().add(key, values);
             if (time > 0)

@@ -55,7 +55,7 @@
         WHERE id=#{id}
     </update>
     <select id="getArticleByState" resultMap="selectBlogMap">
-        select blog.id,blog.title,blog.summary,blog.create_time,blog.vote_size,blog.comment_size,
+        select blog.id,blog.title,blog.summary,blog.create_time,blog.vote_size,blog.tags,blog.create_time,
           blog.read_size,blog.html_content,state,source_type,user.id uid,user.username,user.email,user.name,user.avatar,
         user.tag,user.description,catalog.id cid,catalog.name cname,
         catalog.user_id from blog inner join catalog on blog.catalog_id = catalog.id

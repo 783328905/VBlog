@@ -128,26 +128,7 @@
       excelDownload() {
         var _this = this;
         var url = '/article/excel_download?state=' + this.state + "&keywords=" + this.keywords;
-        getRequest(url).then(resp=> {
-        _this.loading = false;
-        if (resp.status == 200) {
-          _this.articles = resp.data.articles;
-          _this.totalCount = resp.data.totalCount;
-        } else {
-          _this.$message({type: 'error', message: '数据加载失败!'});
-        }
-      }, resp=> {
-        _this.loading = false;
-        if (resp.response.status == 403) {
-          _this.$message({type: 'error', message: resp.response.data});
-        } else {
-          _this.$message({type: 'error', message: '数据加载失败!'});
-        }
-      }).catch(resp=> {
-        //压根没见到服务器
-        _this.loading = false;
-        _this.$message({type: 'error', message: '数据加载失败!'});
-      })
+        window.location.href = url
       },
       //翻页
       currentChange(currentPage){

@@ -24,7 +24,7 @@ public class Article {
     private Integer readSize =0;
     private Integer commentSize =0;
     private Integer voteSize =0;
-    private String tags="";
+    private String tags;
     private Catalog catalog;
     private User user;
     private Integer state=1;     //-1，0，1

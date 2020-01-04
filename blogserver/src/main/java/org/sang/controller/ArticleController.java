@@ -8,6 +8,7 @@ import org.sang.utils.ExcelUtil;
 import org.sang.utils.IPUtil;
 import org.sang.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -24,7 +25,7 @@ import java.util.*;
 /**
  * Created by sang on 2017/12/20.
  */
-@RestController
+@Controller
 @RequestMapping("/article")
 public class ArticleController {
 
@@ -33,6 +34,7 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 
+    @ResponseBody
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public RespBean addNewArticle(@RequestBody Article article) {
         int result = articleService.addNewArticle(article);
@@ -48,6 +50,7 @@ public class ArticleController {
      *
      * @return 返回值为图片的地址
      */
+    @ResponseBody
     @RequestMapping(value = "/uploadimg", method = RequestMethod.POST)
     public RespBean uploadImg(HttpServletRequest req, MultipartFile image) {
         StringBuffer url = new StringBuffer();
@@ -75,6 +78,7 @@ public class ArticleController {
         return new RespBean("error", "上传失败!");
     }
 
+    @ResponseBody
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public Map<String, Object> getArticleByState(@RequestParam(value = "state", defaultValue = "-1") Integer state, @RequestParam(value = "page", defaultValue = "1") Integer page, @RequestParam(value = "count", defaultValue = "6") Integer count,String keywords) {
         int totalCount = articleService.getArticleCountByState(state, Util.getCurrentUser().getId(),keywords);
@@ -95,6 +99,7 @@ public class ArticleController {
 
 
 
+    @ResponseBody
     @RequestMapping(value = "/dustbin", method = RequestMethod.PUT)
     public RespBean updateArticleState(Integer[] aids, Integer state) {
         if (articleService.updateArticleState(aids, state) == aids.length) {
@@ -104,6 +109,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/dataStatistics")
+    @ResponseBody
     public Map<String,Object> dataStatistics() {
         Map<String, Object> map = new HashMap<>();
         List<String> categories = articleService.getCategories();
@@ -117,10 +123,8 @@ public class ArticleController {
     public void excelDownload(@RequestParam(required = false,defaultValue = "") String keyword, Integer state, HttpServletResponse response) throws IOException {
         List<Article> articles = articleService.getArticleByState(state, null, null, keyword);
 
-        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(response.getOutputStream());
-        ExcelUtil.toExcel(bufferedOutputStream,articles,new String[]{"id","title","readSize","tags","updateTime"});
-        bufferedOutputStream.flush();
-        bufferedOutputStream.close();
+        ExcelUtil.toExcel(response,articles,new String[]{"id","title","readSize","tags","createTime"});
+
     }
 
 

@@ -1,221 +1,197 @@
-{
-  "totalCount": 1,
-  "articles": [
-    {
-      "id": 32,
-      "title": "韩信",
-      "content": null,
-      "htmlContent": "<p>韩信</p>\n",
-      "summary": "韩信\n",
-      "createTime": "2019-11-15 15:07:50",
-      "readSize": 9,
-      "commentSize": 0,
-      "voteSize": 0,
-      "tags": "",
-      "catalog": null,
-      "user": {
-        "id": 24,
-        "username": null,
-        "password": null,
-        "email": null,
-        "name": null,
-        "avatar": null,
-        "tag": null,
-        "description": null,
-        "phone": null,
-        "openid": null,
-        "created": null,
-        "score": "0",
-        "roles": null,
-        "enabled": true,
-        "authorities": null,
-        "accountNonLocked": true,
-        "credentialsNonExpired": true,
-        "accountNonExpired": true
+[
+  {
+    "id": 25,
+    "username": "蓑笠翁",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "email": "783328905@qq.com",
+    "name": "qq登录用户",
+    "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=LOT8YHIZLxEhj0pRdTZVng&s=100&t=1558952274",
+    "tag": null,
+    "description": null,
+    "phone": null,
+    "openid": null,
+    "created": 1565278703000,
+    "score": "0",
+    "roles": [
+      {
+        "rid": 3,
+        "rname": "ROLE_USER",
+        "permissions": [],
+        "authority": "ROLE_USER"
+      }
+    ],
+    "accountNonExpired": false,
+    "accountNonLocked": false,
+    "credentialsNonExpired": false,
+    "enabled": true,
+    "authorities": [
+      {
+        "authority": "ROLE_USER"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "username": "Au",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "email": "783328905@qq.com",
+    "name": "qq登录用户",
+    "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=OqlITKePvmiadk42nLsvdoQ&s=100&t=1554385671",
+    "tag": null,
+    "description": null,
+    "phone": null,
+    "openid": null,
+    "created": 1566988694000,
+    "score": "0",
+    "roles": [
+      {
+        "rid": 3,
+        "rname": "ROLE_USER",
+        "permissions": [],
+        "authority": "ROLE_USER"
+      }
+    ],
+    "accountNonExpired": false,
+    "accountNonLocked": false,
+    "credentialsNonExpired": false,
+    "enabled": true,
+    "authorities": [
+      {
+        "authority": "ROLE_USER"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "username": "zuzi",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "email": "foo@foo.com",
+    "name": "zuzi",
+    "avatar": null,
+    "tag": null,
+    "description": null,
+    "phone": "12345",
+    "openid": null,
+    "created": 1566988878000,
+    "score": "0",
+    "roles": [
+      {
+        "rid": 3,
+        "rname": "ROLE_USER",
+        "permissions": [],
+        "authority": "ROLE_USER"
+      }
+    ],
+    "accountNonExpired": false,
+    "accountNonLocked": false,
+    "credentialsNonExpired": false,
+    "enabled": true,
+    "authorities": [
+      {
+        "authority": "ROLE_USER"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "username": "二层",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "email": "783328905@qq.com",
+    "name": "qq登录用户",
+    "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=pR5xIvqwCJ3PP5awqaFhqQ&s=100&t=1555539628",
+    "tag": null,
+    "description": null,
+    "phone": null,
+    "openid": null,
+    "created": 1569252008000,
+    "score": "0",
+    "roles": [
+      {
+        "rid": 3,
+        "rname": "ROLE_USER",
+        "permissions": [],
+        "authority": "ROLE_USER"
       },
-      "state": 1,
-      "updateTime": null,
-      "sourceType": null
-    },
-    {
-      "id": 30,
-      "title": "jackson解决json和java类存在属性不匹配问题",
-      "content": null,
-      "htmlContent": "<p><span style=\"white-space: nowrap;\">Jackson注解</span></p><p><span style=\"white-space: nowrap;\">Jackson类库包含了很多注解，可以让我们快速建立Java类与JSON之间的关系。详细文档可以参考Jackson-Annotations。下面介绍一下常用的。</span></p><p><span style=\"white-space: nowrap;\"><br/></span></p><p><span style=\"white-space: nowrap;\">属性命名</span></p><p><span style=\"white-space: nowrap;\">@JsonProperty注解指定一个属性用于JSON映射，默认情况下映射的JSON属性与注解的属性名称相同，不过可以使用该注解的value值修改JSON属性名，该注解还有一个index属性指定生成JSON属性的顺序，如果有必要的话。</span></p><p><span style=\"white-space: nowrap;\"><br/></span></p><p><span style=\"white-space: nowrap;\">属性包含</span></p><p><span style=\"white-space: nowrap;\">还有一些注解可以管理在映射JSON的时候包含或排除某些属性，下面介绍一下常用的几个。</span></p><p><span style=\"white-space: nowrap;\"><br/></span></p><p><span style=\"white-space: nowrap;\">@JsonIgnore注解用于排除某个属性，这样该属性就不会被Jackson序列化和反序列化。</span></p><p><span style=\"white-space: nowrap;\"><br/></span></p><p><span style=\"white-space: nowrap;\">@JsonIgnoreProperties注解是类注解。在序列化为JSON的时候，@JsonIgnoreProperties({&quot;prop1&quot;, &quot;prop2&quot;})会忽略pro1和pro2两个属性。在从JSON反序列化为Java类的时候，@JsonIgnoreProperties(ignoreUnknown=true)会忽略所有没有Getter和Setter的属性。该注解在Java类和JSON不完全匹配的时候很有用。</span></p><p><span style=\"white-space: nowrap;\"><br/></span></p><p><span style=\"white-space: nowrap;\">@JsonIgnoreType也是类注解，会排除所有指定类型的属性。</span></p><br/><p><br/></p>",
-      "summary": "Jackson注解\nJackson类库包含了很多注解，可以让我们快速建立Java类与JSON之间的关系。详细文档可以参考Jackson-Annotations。下面介绍一下常用的。\n\n属性命名\n@JsonProperty注解指定一个属性用于JSON映射，默认情况下映射的JSON属性与注解的属性名称相同，不过可以使用该注解的value值修改JSON属性名，该注解还有一个index属性指定生成JSON属性的顺序，如果有必要的话。\n\n属性包含\n还有一些注解可以管理在映射JSON的时候包含或排除某些属性，下面介绍一下常用的几个。\n\n@JsonIgnore注解用于排除某个属性，这样该属性就不会被Jack",
-      "createTime": "2019-11-12 09:53:32",
-      "readSize": 8,
-      "commentSize": 0,
-      "voteSize": 0,
-      "tags": "",
-      "catalog": null,
-      "user": {
-        "id": 24,
-        "username": null,
-        "password": null,
-        "email": null,
-        "name": null,
-        "avatar": null,
-        "tag": null,
-        "description": null,
-        "phone": null,
-        "openid": null,
-        "created": null,
-        "score": "0",
-        "roles": null,
-        "enabled": true,
-        "authorities": null,
-        "accountNonLocked": true,
-        "credentialsNonExpired": true,
-        "accountNonExpired": true
+      {
+        "rid": 2,
+        "rname": "ROLE_MEMBER",
+        "permissions": [],
+        "authority": "ROLE_MEMBER"
+      }
+    ],
+    "accountNonExpired": false,
+    "accountNonLocked": false,
+    "credentialsNonExpired": false,
+    "enabled": false,
+    "authorities": [
+      {
+        "authority": "ROLE_USER"
       },
-      "state": 1,
-      "updateTime": null,
-      "sourceType": null
-    },
-    {
-      "id": 29,
-      "title": "推荐歌曲",
-      "content": null,
-      "htmlContent": "<div class=\"m-lycifo\" style=\"margin-top: -10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; white-space: normal; background-color: rgb(245, 245, 245);\"><div class=\"f-cb\"><div class=\"cvrwrap f-cb f-pr\" style=\"position: relative; zoom: 1; float: left; width: 206px; margin-right: -226px;\"><div class=\"u-cover u-cover-6 f-fl\" style=\"float: left; position: relative; width: 198px; height: 198px;\"><img src=\"http://p1.music.126.net/XMBWzf5n63tixcSWyiMA3w==/109951164354978236.jpg?param=130y130\" class=\"j-img\" style=\"display: block; width: 130px; height: 130px; margin: 34px;\"/><span class=\"msk f-alpha\" style=\"background: url(&quot;../../style/web2/img/coverall.png?e717e4269f16a56d6ceb8f95b10a7615&quot;) -140px -580px no-repeat; position: absolute; top: -4px; left: -4px; width: 206px; height: 205px;\"></span></div><div class=\"out s-fc3\" style=\"color: rgb(102, 102, 102); float: left; margin-top: 20px; margin-left: 46px;\"><span class=\"u-icn u-icn-95 f-fl\" style=\"font-size: inherit; float: left; background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -34px -863px no-repeat; display: inline-block; overflow: hidden; vertical-align: middle; width: 16px; height: 16px;\"></span><a class=\"des s-fc7\" style=\"text-decoration-line: underline; color: rgb(12, 115, 194); cursor: pointer; margin-top: 10px; margin-bottom: 10px;\" href=\"http://undefined\">生成外链播放器</a></div></div><div class=\"cnt\" style=\"float: right; width: 414px;\"><div class=\"hd\"><span class=\"lab u-icn u-icn-37\" style=\"font-size: inherit; background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) 0px -463px no-repeat; display: inline-block; overflow: hidden; vertical-align: middle; width: 54px; height: 24px; float: left;\"></span><div class=\"tit\" style=\"margin-left: 64px; position: relative; top: -6px; font-size: 24px;\"><span class=\"f-ff2\" style=\"font-size: inherit; font-family: &quot;Microsoft Yahei&quot;, Arial, Helvetica, sans-serif; vertical-align: middle; margin-right: 7px;\">我爱他 (Cover：丁当 )</span></div></div><p class=\"des s-fc4\" style=\"margin-top: 10px; margin-bottom: 10px; color: rgb(153, 153, 153);\">歌手：<span style=\"color: rgb(51, 51, 51);\"><a class=\"s-fc7\" href=\"http://undefined\" style=\"color: rgb(12, 115, 194); cursor: pointer;\">孔柏森</a></span></p><p class=\"des s-fc4\" style=\"margin-top: 10px; margin-bottom: 10px; color: rgb(153, 153, 153);\">所属专辑：<a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer;\">我爱他</a></p><div class=\"m-info\"><div id=\"content-operation\" class=\"btns f-cb\" style=\"margin-bottom: 25px; margin-right: -10px;\"><a class=\"u-btn2 u-btn2-2 u-btni-addply f-fl\" title=\"播放\" style=\"color: rgb(255, 255, 255); cursor: pointer; float: left; background-image: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;); background-position: right -428px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; display: inline-block; height: 31px; line-height: 31px; overflow: hidden; vertical-align: top; text-align: center; padding-right: 5px; white-space: nowrap;\" href=\"http://undefined\"><span style=\"font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;) 0px -387px no-repeat; display: inline-block; height: 31px; line-height: 31px; overflow: hidden; vertical-align: top; padding-right: 7px; padding-left: 8px; pointer-events: none;\"><span class=\"ply\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;) 0px -1622px no-repeat; float: left; width: 20px; height: 18px; margin-top: 6px; margin-right: 2px; margin-bottom: 2px; overflow: hidden;\"></span>播放</span></a><a class=\"u-btni u-btni-add\" title=\"添加到播放列表\" style=\"cursor: pointer; background-image: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;); background-position: 0px -1588px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; float: left; height: 31px; line-height: 30px; min-width: 23px; white-space: nowrap; width: 31px; margin-left: -3px; margin-right: 5px; font-family: simsun, 宋体;\" href=\"http://undefined\"></a><a class=\"u-btni u-btni-fav \" style=\"cursor: pointer; background-image: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;); background-position: right -1020px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 5px; white-space: nowrap; margin-right: 6px; font-family: simsun, 宋体;\" href=\"http://undefined\"><span style=\"font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;) 0px -977px no-repeat; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 2px; padding-left: 28px;\">收藏</span></a><a class=\"u-btni u-btni-share \" style=\"cursor: pointer; background-image: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;); background-position: right -1020px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 5px; white-space: nowrap; margin-right: 6px; font-family: simsun, 宋体;\" href=\"http://undefined\"><span style=\"font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;) 0px -1225px no-repeat; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 2px; padding-left: 28px;\">分享</span></a><a class=\"u-btni u-btni-dl \" style=\"cursor: pointer; background-image: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;); background-position: right -1020px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 5px; white-space: nowrap; margin-right: 6px; font-family: simsun, 宋体;\" href=\"http://undefined\"><span style=\"font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;) 0px -2761px no-repeat; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 2px; padding-left: 28px;\">下载</span></a><a class=\"u-btni u-btni-cmmt \" style=\"cursor: pointer; background-image: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;); background-position: right -1020px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 5px; white-space: nowrap; margin-right: 6px; font-family: simsun, 宋体;\" href=\"http://undefined\"><span style=\"font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/button2.png?a36676d9a137ac765c16d0752985ba96&quot;) 0px -1465px no-repeat; float: left; height: 31px; line-height: 30px; min-width: 23px; padding-right: 2px; padding-left: 28px;\">(<span id=\"cnt_comment_count\" style=\"cursor: pointer;\">4209</span>)</span></a></div></div><div id=\"lyric-content\" class=\"bd bd-open f-brk f-ib\" style=\"display: inline-block; overflow-wrap: break-word; word-break: break-word; height: auto; margin-top: 13px; line-height: 23px;\">作曲 : 陈威全<br/>作词 : 黄婷<br/>他的轻狂留在<br/>某一节车厢<br/>地下铁里的风<br/>比回忆还重<br/>整座城市一直等着我<br/>有一段感情还在漂泊<br/>对他唯一遗憾<br/>是分手那天<br/>我奔腾的眼泪<br/>都停不下来<br/>若那一刻重来 我不哭<br/><div class=\"crl\" style=\"margin-top: 5px;\"><a id=\"flag_ctrl\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer;\" href=\"http://undefined\">展开<span class=\"u-icn u-icn-69\" style=\"font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -65px -520px no-repeat; display: inline-block; overflow: hidden; vertical-align: middle; width: 11px; height: 8px;\"></span></a></div></div></div></div><div id=\"user-operation\" class=\"lrc-user\" style=\"text-align: right; margin-top: 48px; line-height: 30px;\"><p style=\"margin-top: 0px; margin-bottom: 0px;\"><a class=\"f-tdu s-fc4\" href=\"http://undefined\" style=\"text-decoration-line: underline; color: rgb(153, 153, 153); cursor: pointer;\">报错</a></p><p class=\"s-fc3\" style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(102, 102, 102);\"></p></div></div><div class=\"n-cmt\" id=\"comment-box\" style=\"margin-top: 40px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; white-space: normal; background-color: rgb(245, 245, 245);\"><div id=\"auto-id-onNuFX275vPava5E\"><div class=\"u-title u-title-1\" style=\"height: 33px; border-bottom: 2px solid rgb(194, 12, 12);\"><h3 style=\"margin-bottom: 0px; font-size: 20px; float: left; font-weight: normal; line-height: 28px;\"><span class=\"f-ff2\" style=\"font-family: &quot;Microsoft Yahei&quot;, Arial, Helvetica, sans-serif;\">评论</span></h3><span class=\"sub s-fc3\" style=\"color: rgb(102, 102, 102); float: left; margin-top: 9px; margin-left: 20px;\">共<span class=\"j-flag\">4209</span>条评论</span></div><div class=\"m-cmmt\" style=\"margin-top: 20px;\"><div class=\"iptarea\" style=\"margin-bottom: 20px;\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><img src=\"http://s4.music.126.net/style/web2/img/default/default_avatar.jpg?param=50y50\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"/></div><div class=\"j-flag\"><div class=\"m-cmmtipt f-cb f-pr\" style=\"position: relative; zoom: 1; margin-left: 62px;\"><div class=\"u-txtwrap holder-parent f-pr\" style=\"position: relative; zoom: 1; padding-right: 14px;\"></div><div class=\"btns f-cb f-pr\" style=\"position: relative; zoom: 1; clear: both; padding-top: 10px;\"><span class=\"icn u-icn u-icn-36 j-flag\" id=\"auto-id-z0eWF7ufCSxPmnT5\" style=\"font-size: inherit; background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -40px -490px no-repeat; display: inline-block; overflow: hidden; vertical-align: middle; width: 18px; height: 18px; float: left; margin-right: 10px; cursor: pointer;\"></span><span class=\"icn u-icn u-icn-41 j-flag\" id=\"auto-id-KqNaCvtI8neTtVno\" style=\"font-size: inherit; background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -60px -490px no-repeat; display: inline-block; overflow: hidden; vertical-align: middle; width: 18px; height: 18px; float: left; margin-right: 10px; cursor: pointer;\"></span><a class=\"btn u-btn u-btn-1 j-flag\" id=\"auto-id-yIzbq1fSVut4m4B4\" style=\"color: rgb(255, 255, 255); background-image: url(&quot;../../style/web2/img/button.png?743000d19f7c8af898cc1f31cf7fbdec&quot;); background-position: -84px -64px; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; width: 46px; height: 25px; line-height: 25px; float: right;\" href=\"http://undefined\">评论</a><span class=\"zs s-fc4 j-flag\" style=\"color: rgb(153, 153, 153); float: right; margin-right: 10px; line-height: 25px;\">140</span></div><div class=\"corr u-arr\" style=\"width: 13px; height: 14px; overflow: hidden; position: absolute; top: 11px; left: -7px;\"><span class=\"arrline\" style=\"font-size: 15px; display: block; font-family: SimSun; height: 10px; line-height: normal; color: rgb(205, 205, 205);\">◆</span><span class=\"arrclr\" style=\"display: block; font-family: SimSun; font-size: 15px; height: 10px; line-height: normal; margin-top: -10px; margin-left: 1px; color: rgb(255, 255, 255);\">◆</span></div></div></div></div><div class=\"cmmts j-flag\" id=\"auto-id-GZAhQ2CqnzhV2ws5\"><h3 class=\"u-hd4\" style=\"margin-bottom: 0px; font-size: 12px; position: relative; top: 1px; height: 20px; border-bottom: 1px solid rgb(207, 207, 207);\">精彩评论</h3><div id=\"16247203711573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p1.music.126.net/V--db7BzWkEkyWMB4-TSgQ==/109951163691258173.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">孔柏森</a><span class=\"icn u-icn2 u-icn2-music2\" style=\"background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -110px -190px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 12px; height: 13px; margin-right: 5px;\"></span>：雖然不知道還有多少人在，但是依然還是要謝謝你們的支持！為了這首歌真的很不容易！<img src=\"http://s1.music.126.net/style/web2/emt/emoji_14.png\"/><img src=\"http://s1.music.126.net/style/web2/emt/emoji_14.png\"/><img src=\"http://s1.music.126.net/style/web2/emt/emoji_14.png\"/></div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月10日 20:22</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(6690)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16246019451573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/uu0xetQLs8dIrJxxXe9lQQ==/109951164469805739.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">小攀哟</a><span class=\"u-icn u-icn-84\" style=\"background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -65px -840px no-repeat; display: inline-block; overflow: hidden; vertical-align: -1px; width: 12px; height: 13px; margin-right: 5px; margin-top: -3px;\"></span><img src=\"https://p1.music.126.net/y8pM-M1mytg6B1ThedCbJA==/109951163709550847.png\" class=\"brand-tag brand-vip\" style=\"vertical-align: -1px; margin-right: 5px; height: 12px;\"/>：有谁还知道这歌，现在来完整版了，你们是不是都在等，都等了大半年了</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月10日 16:33</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(3025)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16256560641573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/kPlogMdMitEMu3CCeh-L9Q==/109951164393164821.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">不二不吃鱼</a>：海绵宝宝:“猜猜我有几颗糖?猜对了两颗都给你。&quot;<br/>派大星:&quot;五颗！&quot;<br/>海绵宝宝:&quot;猜对了！先给你两颗，剩下的下次给你~&quot;</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月11日 23:35</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(2284)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16297778361573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/t0SJDMGiXoIaF3brrCeowA==/109951164370081641.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">北北北北6</a>：我发誓&nbsp;从今天开始我不熬夜了在此立誓&nbsp;点下赞还能提醒我❤️</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月16日 01:17</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span></a><a style=\"background-color: rgb(245, 245, 245); cursor: pointer;\" href=\"http://undefined\"><a style=\"background-color: rgb(245, 245, 245); cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(1269)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"background-color: rgb(245, 245, 245); color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span></a></div></div></div><div id=\"16338980151573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/2zcm_mq9_TkH6w07R1Ew_g==/109951164282238965.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">小杨要天天放羊</a>：给云友们八条建议:<br/>1.谈恋爱首先要找你爱的，如果结婚就要找爱你的<br/>2.千万别输在”等&quot;这个字身上<br/>3.永远留住30%的神秘<br/>4.不要低估任何一个人<br/>5.别把没教养当做有气场<br/>6.谈恋爱可以穷，结婚不可以<br/>7.谈恋爱一定要找我<br/>8.牢记第7条，前6条没什么卵用<br/>9.最后，这是我复制的，但是7，8条是真的</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月21日 13:30</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(805)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16247480181573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/uu0xetQLs8dIrJxxXe9lQQ==/109951164469805739.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">小攀哟</a><span class=\"u-icn u-icn-84\" style=\"background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -65px -840px no-repeat; display: inline-block; overflow: hidden; vertical-align: -1px; width: 12px; height: 13px; margin-right: 5px; margin-top: -3px;\"></span><img src=\"https://p1.music.126.net/y8pM-M1mytg6B1ThedCbJA==/109951163709550847.png\" class=\"brand-tag brand-vip\" style=\"vertical-align: -1px; margin-right: 5px; height: 12px;\"/>：如果有好感，那就是喜欢，如果这种好感经得起考验，那就是爱。<a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">@诱宁</a></div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月10日 20:50</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(624)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16373436111573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/SBnAj32m5jdPIT6XSo1A9Q==/109951164137741179.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">小宋不吃葱</a>：如果再来一次我一定要让他觉得我高不可攀&nbsp;温柔至极&nbsp;人间宝藏&nbsp;而我绝不动心</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月25日 12:47</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(614)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16388412871573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/0HowtZMQyVE1zqq-AeZ63Q==/109951163365904250.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">丿夏氵</a><img src=\"https://p1.music.126.net/iOnYL-pAvH2LuQfStGOjfQ==/109951163709553273.png\" class=\"brand-tag brand-vip\" style=\"vertical-align: -1px; margin-right: 5px; height: 12px;\"/>：“分手之后依然是朋友。”这句话到底是什么意思？&nbsp;大概就是我们平时不要联系，但是如果你有什么重要的事情，我还是会帮你，仅此而已。我知道你所有的往事，我记得我们发生过的故事，我不会忘了那些深夜的情话，但是我们分手了，我不会再去打扰你的生活，你也不要来打扰我的。&nbsp;——转发的&nbsp;但是很深刻</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月27日 11:24</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(495)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16412524281573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/WdyLBj6lUY_SwkByrl-W9g==/109951164471474120.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">愿世界没有别离</a><img src=\"https://p1.music.126.net/iOnYL-pAvH2LuQfStGOjfQ==/109951163709553273.png\" class=\"brand-tag brand-vip\" style=\"vertical-align: -1px; margin-right: 5px; height: 12px;\"/>：总有一天你会明白什么是爱<br/>当你坐车几百公里<br/>去看一个人的时候<br/>在路上你就会明白</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月30日 03:08</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(293)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16390590671573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/kg_0U4pSuaRy-KIGPQeSrg==/109951163974759121.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">我被你发现了</a>：如果能重来&nbsp;我不会选择你</div></div><div class=\"rp\" style=\"margin-top: 15px; text-align: right;\"><div class=\"time s-fc4\" style=\"color: rgb(153, 153, 153); float: left;\">9月27日 16:44</div><a style=\"cursor: pointer;\" href=\"http://undefined\"><span class=\"zan u-icn2 u-icn2-12\" style=\"text-align: left; font-size: inherit; cursor: pointer; background: url(&quot;../../style/web2/img/icon2.png?9cb40bdc2f4d6300f0a4cb6e0ae98c50&quot;) -150px 0px no-repeat; display: inline-block; overflow: hidden; vertical-align: -2px; width: 15px; height: 14px; margin-top: -4px; margin-right: 5px;\"></span>&nbsp;(240)</a><span class=\"sep\" style=\"margin-right: 8px; margin-left: 8px; color: rgb(204, 204, 204);\">|</span><a class=\"s-fc3\" style=\"color: rgb(102, 102, 102); cursor: pointer;\" href=\"http://undefined\">回复</a></div></div></div><div id=\"16246650941573038026928\" class=\"itm\" style=\"padding-top: 15px; padding-bottom: 15px; border-top: 1px dotted rgb(204, 204, 204);\"><div class=\"head\" style=\"float: left; width: 50px; height: 50px; margin-right: -100px;\"><a href=\"http://undefined\" style=\"color: rgb(51, 51, 51); cursor: pointer;\"><img src=\"https://p2.music.126.net/I03cNL8yREs6B43rz9gtmg==/109951164332938094.jpg?param=50y50\" style=\"cursor: pointer; float: left; width: 50px; height: 50px; margin-right: -100px;\"/></a></div><div class=\"cntwrap\" style=\"margin-left: 60px;\"><div class=\"\"><div class=\"cnt f-brk\" style=\"overflow-wrap: break-word; word-break: break-word; width: 580px; overflow: hidden; line-height: 20px;\"><a href=\"http://undefined\" class=\"s-fc7\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">三歲絆丶</a>：为什么他唱的没以前那种感觉了</div></div><div class=\"que f-brk f-pr s-fc3\" style=\"position: relative; zoom: 1; overflow-wrap: break-word; word-break: break-word; color: rgb(102, 102, 102); padding: 8px 19px; margin-top: 10px; line-height: 20px; background: rgb(244, 244, 244); border: 1px solid rgb(222, 222, 222);\"><span class=\"darr\" style=\"position: absolute; top: -7px; left: 20px; line-height: 14px;\"><span class=\"bd\" style=\"font-size: inherit; position: absolute; top: 0px; left: 0px; color: rgb(222, 222, 222);\">◆</span><span class=\"bg\" style=\"font-size: inherit; position: absolute; top: 1px; left: 0px; color: rgb(244, 244, 244);\">◆</span></span><a class=\"s-fc7\" href=\"http://undefined\" style=\"color: rgb(12, 115, 194); cursor: pointer; margin-right: 5px;\">小攀哟<span class=\"u-icn u-icn-84\" style=\"cursor: pointer; background: url(&quot;../../style/web2/img/icon.png?d9d8e28beca5ebf5217187a21d4625fd&quot;) -65px -840px no-repeat; display: inline-block; overflow: hidden; vertical-align: -1px; width: 12px; height: 13px; margin-right: 5px; margin-top: -3px;\"></span></a>：有谁还知道这歌，现在来完整版了，你们是不是都在等，都等了大半年了</div></div></div></div></div></div></div><p><br/></p>",
-      "summary": "每个女人都曾经相信明天就是未来，但当爱情中的期待变成只是巨大幻影，该怎么面对？丁当首波抒情主打《我爱他》就是这种心情，丁当一字一句百转千回的刻化，如晴空阴天般瞬间气氛变化，整首歌本身就像一出戏，丁当的声音技巧虽然早已被受肯定，但这首歌由内而外的情绪张力更让人流连忘返，触动了广大听众的内心，成为每一个人的爱情印记 [3]  。",
-      "createTime": "2019-11-06 19:03:23",
-      "readSize": 16,
-      "commentSize": 0,
-      "voteSize": 0,
-      "tags": "",
-      "catalog": null,
-      "user": {
-        "id": 24,
-        "username": null,
-        "password": null,
-        "email": null,
-        "name": null,
-        "avatar": null,
-        "tag": null,
-        "description": null,
-        "phone": null,
-        "openid": null,
-        "created": null,
-        "score": "0",
-        "roles": null,
-        "enabled": true,
-        "authorities": null,
-        "accountNonLocked": true,
-        "credentialsNonExpired": true,
-        "accountNonExpired": true
-      },
-      "state": 1,
-      "updateTime": null,
-      "sourceType": null
-    },
-    {
-      "id": 28,
-      "title": "需求设计",
-      "content": null,
-      "htmlContent": "<p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><strong>待爬网页：</strong></p><div class=\"table-wrap\" style=\"margin-top: 10px; overflow-x: auto; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><table class=\"confluenceTable\" style=\"margin-top: 0px; margin-bottom: 0px; overflow-x: auto;\"><colgroup><col/><col/></colgroup><tbody><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">微互加</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">https://www.vhujia.com/weixin/index/id/158.html</a></td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">微信群</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">http://www.wxqun.com/wxq/ws.html</a></td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">微信群2</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">https://www.weixinqun.com/group?id=1082822</a></td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">扫用网</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">http://www.saoyong.com/group/</a></td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">群分享</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">https://www.qunfenxiang.net/</a></td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">微商网</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">https://www.wshangw.net/a/weishangqun/</a></td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">微信群</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">http://www.jinnianduoda.com/list/201-0-0.html</a></td></tr><tr><td colspan=\"1\" class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">微群大群999平台</td><td colspan=\"1\" class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\"><a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">http://www.weiqun98.com/index.php/post/tag/s-wq-shejiao-jiaoyou</a></td></tr></tbody></table></div><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><strong>经分析大多都是典型的列表加详情页网站</strong></p><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><img class=\"confluence-embedded-image\" src=\"https://wiki.changingedu.com/download/attachments/91915076/image2019-11-6%2017%3A51%3A35.png?version=1&modificationDate=1573035266000&api=v2\" style=\"cursor: pointer;\"/><img class=\"confluence-embedded-image\" src=\"https://wiki.changingedu.com/download/attachments/91915076/image2019-11-6%2017%3A52%3A30.png?version=1&modificationDate=1573035266000&api=v2\" style=\"cursor: pointer;\"/></p><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\">&nbsp;</p><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><strong>1.使用webmagic框架爬取可以抽出公共的部分做成配置存入数据库，有两点需要特殊处理</strong></p><ul style=\"margin-top: 10px; list-style-type: disc; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><li><strong>不同网站日期格式不同，需要写出一个日期处理函数分类处理</strong></li><li><strong>某些网站url不带域名 如：<span style=\"color: rgb(34, 34, 34);\">/Uploads/2019/11/06/5dc24c35c6f30.png，处理这种url时需要添加上域名前缀</span></strong><br/><strong><span style=\"color: rgb(34, 34, 34);\"><br/></span></strong><strong><span style=\"color: rgb(34, 34, 34);\"><br/></span></strong><strong><span style=\"color: rgb(34, 34, 34);\"><br/></span></strong></li></ul><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><span style=\"color: rgb(34, 34, 34);\"><strong>2.公共的配置经分析如下</strong></span></p><div class=\"table-wrap\" style=\"margin-top: 10px; overflow-x: auto; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><table class=\"confluenceTable tablesorter\" style=\"margin-top: 0px; margin-bottom: 0px; overflow-x: auto;\"><thead><tr class=\"sortableHeader\"><th class=\"confluenceTh sortableHeader\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; background-position: right center; background-repeat: no-repeat; background-color: rgb(240, 240, 240); font-weight: bold; color: rgb(0, 0, 0); cursor: pointer;\"><div class=\"tablesorter-header-inner\">&nbsp;</div></th><th class=\"confluenceTh sortableHeader\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 15px 7px 10px; vertical-align: top; background-position: right center; background-repeat: no-repeat; background-color: rgb(240, 240, 240); font-weight: bold; color: rgb(0, 0, 0); cursor: pointer;\"><div class=\"tablesorter-header-inner\">&nbsp;</div></th></tr></thead><tbody><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">url</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\">要爬取的网站url</td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">list_page_xpath</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\">列表页xpath</td></tr><tr><td class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">detail_page_xpath</td><td class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\">详情页xpath</td></tr><tr><td colspan=\"1\" class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">detail_page_reg</td><td colspan=\"1\" class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\">详情页正则表达式</td></tr><tr><td colspan=\"1\" class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">img_src_xpath</td><td colspan=\"1\" class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\">二维码图片url的xpath</td></tr><tr><td colspan=\"1\" class=\"confluenceTd\" style=\"border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 7px 10px; text-align: left;\">date_str_xpath</td><td colspan=\"1\" class=\"confluenceTd\" style=\"border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); padding: 7px 10px;\">日期的xpath</td></tr></tbody></table></div><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><strong>3.processor模板，根据这个模板只要写入不同配置，就能爬取不同网站</strong></p><pre style=\"margin-top: 10px; margin-bottom: 0px; padding: 0px; font-size: 14px; background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(0, 0, 128);\">public void </span>process(Page page) {<br/>    String currentPageUrl = page.getUrl().toString();    <br/>    <span style=\"color: rgb(102, 14, 122);\">logger</span>.info(<span style=\"color: rgb(0, 128, 0);\">&quot;processing url:{}&quot;</span>,currentPageUrl);<br/>    Selectable html = page.getHtml();<br/><br/><br/>    <span style=\"color: rgb(128, 128, 128);\">//</span><span style=\"color: rgb(128, 128, 128);\">如果页是详情页 则获取二维码地址，日期，判断日期是否有效</span><span style=\"color: rgb(128, 128, 128);\"><br/></span><span style=\"color: rgb(128, 128, 128);\">&nbsp;</span><span style=\"color: rgb(0, 0, 128);\">if</span>(page.getUrl().regex(<span style=\"color: rgb(102, 14, 122);\">qrCodeWebConfig</span>.getDetailPageReg()).match()){<br/>        String publishDateString = html.xpath(<span style=\"color: rgb(102, 14, 122);\">qrCodeWebConfig</span>.getDateStrXpath()).toString();<br/>        <span style=\"color: rgb(0, 0, 128);\">if</span>(!dateValid(publishDateString))<br/>            <span style=\"color: rgb(0, 0, 128);\">return</span>;<br/><br/>        String img = html.xpath(<span style=\"color: rgb(102, 14, 122);\">qrCodeWebConfig</span>.getImgSrcXpath()).toString();<br/>        //图片地址在这处理，判断是否带有域名前缀，没有域名前缀就加上</pre><pre style=\"margin-top: 10px; margin-bottom: 0px; padding: 0px; font-size: 14px; background-color: rgb(255, 255, 255);\">        img = addUrlPrefix(img)</pre><pre style=\"margin-top: 10px; margin-bottom: 0px; padding: 0px; font-size: 14px; background-color: rgb(255, 255, 255);\">        page.putField(<span style=\"color: rgb(0, 128, 0);\">&quot;fromUrl&quot;</span>,currentPageUrl);<br/>        page.putField(<span style=\"color: rgb(0, 128, 0);\">&quot;imgUrl&quot;</span>,img);<br/><br/>    <br/>    }<span style=\"color: rgb(0, 0, 128);\">else </span>{<br/><br/>       //如果是列表页，抽取列表页url和详情页url加入任务队列<br/>        List&lt;String&gt; listPageUrls = page.getHtml().xpath(<span style=\"color: rgb(102, 14, 122);\">qrCodeWebConfig</span>.getListPageXpath()).all();<br/>        page.addTargetRequests(listPageUrls);<br/>      <span style=\"color: rgb(128, 128, 128);\"><br/></span><span style=\"color: rgb(128, 128, 128);\">&nbsp; </span>List&lt;String&gt; detailPageUrls = page.getHtml().xpath(<span style=\"color: rgb(102, 14, 122);\">qrCodeWebConfig</span>.getDetailPageXpath()).all();<br/>        page.addTargetRequests(detailPageUrls);<br/><br/>    }<br/>}</pre><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\"><strong>4.思考是否需要将配置表并入t_common_config,做成网站名对映配置json如：</strong></p><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\">&nbsp; &nbsp; vhujia-&gt;&nbsp;</p><p style=\"margin-top: 10px; margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: normal;\">{<br/>&quot;url&quot; : &quot;<a href=\"http://undefined\" class=\"external-link\" style=\"color: rgb(50, 108, 166);\">https://www.vhujia.com/weixin/index/id/158.html</a>&quot;,<br/>&quot;listPageXpath&quot; : &quot;/html/body/div[3]/div[3]/div[1]/div[2]/a/@href&quot;,<br/>&quot;detailPageXpath&quot;:&quot;/html/body/div[3]/div[3]/div[1]/div[1]/ul/li/dl/dd[1]/a/@href&quot;,<br/>&quot;detailPageReg&quot;:&quot;<a style=\"color: rgb(50, 108, 166);\" href=\"http://undefined\">http://www.vhujia.com/weixin/show/id/\\\\d+.html</a>&quot;,<br/>&quot;imgSrcXpath&quot;:&quot;/html/body/div[3]/div[3]/div[1]/div[1]/div[2]/div/div/img/@src&quot;,<br/>&quot;dateStrXpath&quot;:&quot;/html/body/div[3]/div[3]/div[1]/div[1]/div[2]/div/ul/li[2]/text()&quot;<br/>}</p><p><br/></p>",
-      "summary": "需求分析是软件计划阶段的重要活动，也是软件生存周期中的一个重要环节，该阶段是分析系统在功能上需要“实现什么”，而不是考虑如何去“实现”。需求分析的目标是把用户对待开发软件提出的“要求”或“需要”进行分析与整理，确认后形成描述完整、清晰与规范的文档，确定软件需要实现哪些功能，完成哪些工作。此外，软件的一些非功能性需求(如软件性能、可靠性、响应时间、可扩展性等)，软件设计的约束条件，运行时与其他软件的关系等也是软件需求分析的目标。",
-      "createTime": "2019-11-06 18:57:07",
-      "readSize": 4,
-      "commentSize": 0,
-      "voteSize": 0,
-      "tags": "",
-      "catalog": null,
-      "user": {
-        "id": 24,
-        "username": null,
-        "password": null,
-        "email": null,
-        "name": null,
-        "avatar": null,
-        "tag": null,
-        "description": null,
-        "phone": null,
-        "openid": null,
-        "created": null,
-        "score": "0",
-        "roles": null,
-        "enabled": true,
-        "authorities": null,
-        "accountNonLocked": true,
-        "credentialsNonExpired": true,
-        "accountNonExpired": true
-      },
-      "state": 1,
-      "updateTime": null,
-      "sourceType": null
-    },
-    {
-      "id": 27,
-      "title": "sql查询近7天数据",
-      "content": null,
-      "htmlContent": "<hr/><p>select * from t_wechat_qrcode where create_time - publish_time &lt;30</p><hr/><hr/><p><br/></p>",
-      "summary": "sql查询近7天数据",
-      "createTime": "2019-10-28 16:55:12",
-      "readSize": 3,
-      "commentSize": 0,
-      "voteSize": 0,
-      "tags": "",
-      "catalog": null,
-      "user": {
-        "id": 24,
-        "username": null,
-        "password": null,
-        "email": null,
-        "name": null,
-        "avatar": null,
-        "tag": null,
-        "description": null,
-        "phone": null,
-        "openid": null,
-        "created": null,
-        "score": "0",
-        "roles": null,
-        "enabled": true,
-        "authorities": null,
-        "accountNonLocked": true,
-        "credentialsNonExpired": true,
-        "accountNonExpired": true
-      },
-      "state": 1,
-      "updateTime": null,
-      "sourceType": null
-    },
-    {
-      "id": 26,
-      "title": "工作中  ---爬取博客园",
-      "content": null,
-      "htmlContent": "<div class=\"postBody\">  <div id=\"cnblogs_post_body\" class=\"blogpost-body \">   <div class=\"cnblogs_code\">    <pre>String s1 = \"Hello\"<span style=\"color: #000000;\">;String s2 </span>= \"Hello\"<span style=\"color: #000000;\">;String s3 </span>= \"Hel\" + \"lo\"<span style=\"color: #000000;\">;String s4 </span>= \"Hel\" + <span style=\"color: #0000ff;\">new</span> String(\"lo\"<span style=\"color: #000000;\">);String s5 </span>= <span style=\"color: #0000ff;\">new</span> String(\"Hello\"<span style=\"color: #000000;\">);String s6 </span>=<span style=\"color: #000000;\"> s5.intern();String s7 </span>= \"H\"<span style=\"color: #000000;\">;String s8 </span>= \"ello\"<span style=\"color: #000000;\">;String s9 </span>= s7 +<span style=\"color: #000000;\"> s8;          System.out.println(s1 </span>== s2);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> true</span>System.out.println(s1 == s3);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> true</span>System.out.println(s1 == s4);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> false</span>System.out.println(s1 == s9);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> false</span>System.out.println(s4 == s5);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> false</span>System.out.println(s1 == s6);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> true</span></pre>   </div>   <p>刚开始看字符串的时候，经常会看到类似的题，难免会有些不解，查看答案总会提到字符串常量池、运行常量池等概念，很容易让人搞混。</p>   <p>下面就来说说Java中的字符串到底是怎样创建的。</p>   <h3>Java内存区域&nbsp;</h3>   <p>String有两种赋值方式，第一种是通过“<strong>字面量</strong>”赋值。</p>   <div class=\"cnblogs_code\">    <pre>String str = \"Hello\";</pre>   </div>   <div class=\"highlight\">    <div class=\"highlight\">    &nbsp;第二种是通过    <strong>new</strong>关键字创建新对象。   </div>    <div class=\"highlight\">     <div class=\"cnblogs_code\">      <pre>String str = <span style=\"color: #0000ff;\">new</span> String(\"Hello\");</pre>     </div>    </div>   </div>   <p>&nbsp;要弄清楚这两种方式的区别，首先要知道他们在内存中的存储位置。</p>   <p><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170929204305559-896175948.png\" alt=\"\"></p>   <p><span style=\"font-size: 12px; color: #808080;\"><em>图片来源：http://286.iteye.com/blog/1928180</em></span></p>   <p>我们平时所说的内存就是图中的<strong>运行时数据区（Runtime Data Area）</strong>，其中与字符串的创建有关的是<strong>方法区（Method Area）</strong>、<strong>堆区（Heap Area）</strong>和<strong>栈区（Stack Area）</strong>。</p>   <ol>    <li><strong>方法区</strong>：存储类信息、常量、静态变量。全局共享。</li>    <li><strong>堆区</strong>：存放对象和数组。全局共享。</li>    <li><strong>栈区</strong>：基本数据类型、对象的引用都存放在这。线程私有。</li>   </ol>   <p><a href=\"http://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920153811462-862037386.jpg\" target=\"_blank\"><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920153811462-862037386.jpg\" alt=\"\"></a></p>   <p>每当一个方法被执行时就会在栈区中创建一个<strong>栈帧（Stack Frame）</strong>，基本数据类型和对象引用就存在栈帧中<strong>局部变量表（Local Variables）</strong>。</p>   <p>当一个类被加载之后，类信息就存储在非堆的方法区中。在方法区中，有一块叫做<strong>运行时常量池（Runtime Constant Pool）</strong>,它是每个类私有的，每个class文件中的“常量池”被加载器加载之后就映射存放在这，后面会说到这一点。</p>   <p>和String最相关的是<strong>字符串池（String Pool）</strong>，其位置在方法区上面的<strong>驻留字符串（Interned Strings）的位置</strong>，之前一直把它和运行时常量池搞混，其实是两个完全不同的存储区域，字符串常量池是全局共享的。字符串调用String.intern()方法后，其引用就存放在String Pool中。</p>   <h3>两种创建方式在内存中的区别</h3>   <p>了解了这些概念，下面来说说究竟两种字符串创建方式有何区别。</p>   <p>下面的Test类，在main方法里以“字面量”赋值的方式给字符串str赋值为“Hello”。</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">class</span><span style=\"color: #000000;\"> Test {    </span><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {                String str </span>= \"Hello\"<span style=\"color: #000000;\">;            } }</span></pre>   </div>   <p>Test.java文件编译后得到.class文件，里面包含了类的信息，其中有一块叫做<strong>常量池（Constant Pool）</strong>的区域，.class常量池和内存中的常量池并不是一个东西。</p>   <p>.class文件常量池主要存储的就包括<strong>字面量</strong>，字面量包括类中定义的常量，由于String是不可变的（<a href=\"http://www.cnblogs.com/justcooooode/p/7514863.html\" target=\"_blank\">String为什么是不可变的？</a>），所以字符串“Hello”就存放在这。</p>   <p><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170929184033950-619493112.png\" alt=\"\"></p>   <p>当程序用到Test类时，Test.class被解析到内存中的方法区。.class文件中的常量池信息会被加载到运行时常量池，但String不是。</p>   <p>例子中“Hello”会在堆区中创建一个对象，同时会在字符串池（String Pool）存放一个它的引用，如下图所示。</p>   <p><a href=\"http://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920154211321-596178280.png\" target=\"_blank\"><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920154211321-596178280.png\" alt=\"\"></a></p>   <p><strong>此时只是Test类刚刚被加载，主函数中的str并没有被创建，而“Hello”对象已经创建在于堆中。</strong></p>   <p><span>当主线程开始创建str变量的，虚拟机会去字符串池中找是否有equals(“Hello”)的String，如果相等就把在字符串池中“Hello”的引用复制给str。如果找不到相等的字符串，就会在堆中新建一个对象，同时把引用驻留在字符串池，再把引用赋给str。</span></p>   <p><a href=\"http://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920212341228-1393425975.png\" target=\"_blank\"><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920212341228-1393425975.png\" alt=\"\"></a></p>   <p>当用字面量赋值的方法创建字符串时，无论创建多少次，只要字符串的值相同，它们所指向的都是堆中的同一个对象。</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">class</span><span style=\"color: #000000;\"> Test {    </span><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {                String str1 </span>= \"Hello\"<span style=\"color: #000000;\">;        String str2 </span>=<span style=\"color: #000000;\"> “Hello”;        String str3 </span>=<span style=\"color: #000000;\"> “Hello”;            } }</span></pre>   </div>   <p><a href=\"http://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920213030587-629195501.png\" target=\"_blank\"><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920213030587-629195501.png\" alt=\"\"></a>&nbsp;</p>   <p>当利用<strong>new</strong>关键字去创建字符串时，前面加载的过程是一样的，只是在运行时无论字符串池中有没有与当前值相等的对象引用，都会在堆中新开辟一块内存，创建一个对象。</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">class</span><span style=\"color: #000000;\"> Test {    </span><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {                String str1 </span>= \"Hello\"<span style=\"color: #000000;\">;        String str2 </span>=<span style=\"color: #000000;\"> “Hello”;        String str3 </span>= <span style=\"color: #0000ff;\">new</span> String(\"Hello\"<span style=\"color: #000000;\">);            } }</span></pre>   </div>   <p><a href=\"http://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920213937103-776364568.png\" target=\"_blank\"><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170920213937103-776364568.png\" alt=\"\"></a></p>   <h3>解释开头的例子</h3>   <p>现在我们来回头看之前的例子。</p>   <div class=\"cnblogs_code\">    <pre>String s1 = \"Hello\"<span style=\"color: #000000;\">;String s2 </span>= \"Hello\"<span style=\"color: #000000;\">;String s3 </span>= \"Hel\" + \"lo\"<span style=\"color: #000000;\">;String s4 </span>= \"Hel\" + <span style=\"color: #0000ff;\">new</span> String(\"lo\"<span style=\"color: #000000;\">);String s5 </span>= <span style=\"color: #0000ff;\">new</span> String(\"Hello\"<span style=\"color: #000000;\">);String s6 </span>=<span style=\"color: #000000;\"> s5.intern();String s7 </span>= \"H\"<span style=\"color: #000000;\">;String s8 </span>= \"ello\"<span style=\"color: #000000;\">;String s9 </span>= s7 +<span style=\"color: #000000;\"> s8;          System.out.println(s1 </span>== s2);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> true</span>System.out.println(s1 == s3);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> true</span>System.out.println(s1 == s4);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> false</span>System.out.println(s1 == s9);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> false</span>System.out.println(s4 == s5);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> false</span>System.out.println(s1 == s6);  <span style=\"color: #008000;\">//</span><span style=\"color: #008000;\"> true</span></pre>   </div>   <p>&nbsp;有了上面的基础，之前的问题就迎刃而解了。</p>   <p><strong>s1</strong>在创建对象的同时，在字符串池中也创建了其对象的引用。</p>   <p>由于<strong>s2</strong>也是利用字面量创建，所以会先去字符串池中寻找是否有相等的字符串，显然<strong>s1</strong>已经帮他创建好了，它可以直接使用其引用。那么s1和s2所指向的都是同一个地址，所以<strong>s1==s2</strong>。</p>   <p><strong>s3</strong>是一个字符串拼接操作，参与拼接的部分都是字面量，编译器会进行优化，在编译时s3就变成“Hello”了，所以<strong>s1==s3</strong>。</p>   <p><strong>s4</strong>虽然也是拼接，但“lo”是通过<strong>new</strong>关键字创建的，在编译期无法知道它的地址，所以不能像s3一样优化。所以必须要等到运行时才能确定，必然新对象的地址和前面的不同。</p>   <p>同理，<strong>s9</strong>由两个变量拼接，编译期也不知道他们的具体位置，不会做出优化。</p>   <p><strong>s5</strong>是new出来的，在堆中的地址肯定和s4不同。</p>   <p><strong>s6</strong>利用intern()方法得到了s5在字符串池的引用，并不是s5本身的地址。由于它们在字符串池的引用都指向同一个“Hello”对象，自然<strong>s1==s6</strong>。</p>   <p>&nbsp;总结一下：</p>   <ul>    <li><strong>字面量创建字符串会先在字符串池中找，看是否有相等的对象，没有的话就在堆中创建，把地址驻留在字符串池；有的话则直接用池中的引用，避免重复创建对象。</strong></li>    <li><strong>new关键字创建时，前面的操作和字面量创建一样，只不过最后在运行时会创建一个新对象，变量所引用的都是这个新对象的地址。</strong></li>   </ul>   <p>&nbsp;由于不同版本的JDK内存会有些变化，JDK1.6字符串常量池在永久代，1.7移到了堆中，1.8用元空间代替了永久代。但是基本对上面的结论没有影响，思想是一样的。</p>   <h3>intern()方法</h3>   <p>下面来说说跟字符常量池有关的<strong>intern()</strong>方法。</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #008000;\">/**</span><span style=\"color: #008000;\">     * Returns a canonical representation for the string object.     * &lt;p&gt;     * A pool of strings, initially empty, is maintained privately by the     * class {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> String}.     * &lt;p&gt;     * When the intern method is invoked, if the pool already contains a     * string equal to this {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> String} object as determined by     * the {</span><span style=\"color: #808080;\">@link</span><span style=\"color: #008000;\"> #equals(Object)} method, then the string from the pool is     * returned. Otherwise, this {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> String} object is added to the     * pool and a reference to this {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> String} object is returned.     * &lt;p&gt;     * It follows that for any two strings {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> s} and {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> t},     * {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> s.intern() == t.intern()} is {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> true}     * if and only if {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> s.equals(t)} is {</span><span style=\"color: #808080;\">@code</span><span style=\"color: #008000;\"> true}.     * &lt;p&gt;     * All literal strings and string-valued constant expressions are     * interned. String literals are defined in section 3.10.5 of the     * &lt;cite&gt;The Java&amp;trade; Language Specification&lt;/cite&gt;.     *     * </span><span style=\"color: #808080;\">@return</span><span style=\"color: #008000;\">  a string that has the same contents as this string, but is     *          guaranteed to be from a pool of unique strings.     </span><span style=\"color: #008000;\">*/</span>    <span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">native</span> String intern();</pre>   </div>   <p>这个方法是一个本地方法，注释中描述得很清楚：“如果常量池中存在当前字符串，就会直接返回当前字符串；如果常量池中没有此字符串，会将此字符串放入常量池中后，再返回”。</p>   <p>由于上面提到JDK1.6之后，字符串常量池在内存中的位置发生了变化，所以intern()方法在不同版本的JDK中也有所差别。</p>   <p>来看下面的代码：</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {    String s </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    s.intern();    String s2 </span>= \"1\"<span style=\"color: #000000;\">;    System.out.println(s </span>==<span style=\"color: #000000;\"> s2);    String s3 </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\") + <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    s3.intern();    String s4 </span>= \"11\"<span style=\"color: #000000;\">;    System.out.println(s3 </span>==<span style=\"color: #000000;\"> s4);}</span></pre>   </div>   <p>在JDK1.6中的运行结果是<strong>false false</strong>，而在1.7中结果是<strong>false true</strong>。</p>   <p>将intern()语句下移一行。</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {    String s </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    String s2 </span>= \"1\"<span style=\"color: #000000;\">;    s.intern();    System.out.println(s </span>==<span style=\"color: #000000;\"> s2);    String s3 </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\") + <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    String s4 </span>= \"11\"<span style=\"color: #000000;\">;    s3.intern();    System.out.println(s3 </span>==<span style=\"color: #000000;\"> s4);}</span></pre>   </div>   <p>在JDK1.6中的运行结果是<strong>false false</strong>，在1.7中结果也是<strong>false false</strong>。</p>   <p>下面来解释一下<strong>JDK1.6</strong>环境下的结果：</p>   <p><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170929183900606-1688428199.png\" alt=\"\"></p>   <p>图中绿色线条代表string对象的内容指向，黑色线条代表地址指向。</p>   <p>JDK1.6中的intern()方法只是返回常量池中的引用，上面说过，常量池中的引用所指向的对象和new出来的对象并不是一个，所以他们的地址自然不相同。</p>   <p>接着来说一下<strong>JDK1.7</strong>：</p>   <p><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170929183909169-2103124161.png\" alt=\"\"></p>   <p>再贴一下代码</p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {    String s </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    s.intern();    String s2 </span>= \"1\"<span style=\"color: #000000;\">;    System.out.println(s </span>==<span style=\"color: #000000;\"> s2);    String s3 </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\") + <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    s3.intern();    String s4 </span>= \"11\"<span style=\"color: #000000;\">;    System.out.println(s3 </span>==<span style=\"color: #000000;\"> s4);}</span></pre>   </div>   <p>创建s3生成了两个最终对象（<strong>不考虑两个new String(\"1\")，常量池中也没有“11”</strong>），一个是<strong>s3</strong>，另一个是池中的<strong>“1”</strong>。如果在1.6中，s3调用intern()方法，则先在常量池中寻找是否有等于“11”的对象，本例中自然是没有，然后会在堆中创建一个“11”的对象，并在常量池中存储它的引用并返回。然而在1.7中调用intern()，如果这个字符串在常量池中是<span style=\"color: #ff0000;\"><strong>第一次出现</strong></span>，则不会重新创建对象，直接返回它在堆中的引用。在本例中，s4和s3指向的都是在堆中的那个对象，所以s3和s4的地址相等。</p>   <p>由于<strong>s</strong>是new出来的，所以会在常量池和堆中创建两个不同的对象，s.intern()后，发现“1”并不是第一次出现在常量池了，所以接下来就和之前没有区别了。<strong><br></strong></p>   <p><img src=\"https://images2017.cnblogs.com/blog/1177828/201709/1177828-20170929183728481-2021113406.png\" alt=\"\"></p>   <div class=\"cnblogs_code\">    <pre><span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span><span style=\"color: #000000;\"> main(String[] args) {    String s </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    String s2 </span>= \"1\"<span style=\"color: #000000;\">;    s.intern();    System.out.println(s </span>==<span style=\"color: #000000;\"> s2);    String s3 </span>= <span style=\"color: #0000ff;\">new</span> String(\"1\") + <span style=\"color: #0000ff;\">new</span> String(\"1\"<span style=\"color: #000000;\">);    String s4 </span>= \"11\"<span style=\"color: #000000;\">;    s3.intern();    System.out.println(s3 </span>==<span style=\"color: #000000;\"> s4);}</span></pre>   </div>   <p>将intern()语句下移一行后，执行顺序发生改变，执行到intern()时，字符串常量池已经存在“1”和“11”了，并不是第一次出现，字面量对象依然指向的是常量池，所以字面量创建的对象和new的对象地址一定是不同的。</p>   <hr>   <p>转载请注明原文链接：<a href=\"http://www.cnblogs.com/justcooooode/p/7603381.html\" target=\"_blank\">http://www.cnblogs.com/justcooooode/p/7603381.html</a></p>   <h3>参考资料</h3>   <p><span>https://www.zhihu.com/question/29884421/answer/113785601</span></p>   <p>http://www.cnblogs.com/iyangyuan/p/4631696.html</p>   <p>https://tech.meituan.com/in_depth_understanding_string_intern.html</p>   <p>https://javaranch.com/journal/200409/ScjpTipLine-StringsLiterally.html ——【译】<span style=\"text-decoration: underline;\"><a href=\"http://www.cnblogs.com/justcooooode/p/7670256.html\" target=\"_blank\">Java中的字符串字面量</a></span></p>  </div>  <div id=\"MySignature\"></div>  <div class=\"clear\"></div>  <div id=\"blog_post_info_block\">   <div id=\"blog_post_info\"></div>   <div class=\"clear\"></div>   <div id=\"post_next_prev\"></div>  </div> </div>",
-      "summary": "Java爬虫框架WebMagic入门——爬取列表类网站文章\n阅读目录\n\nWebMagic框架简介\n环境配置\n爬取列表类网站例子\n参考资料 \n 初学爬虫，WebMagic作为一个Java开发的爬虫框架很容易上手，下面就通过一个简单的小例子来看一下。",
-      "createTime": "2019-10-24 15:06:51",
-      "readSize": 11,
-      "commentSize": 0,
-      "voteSize": 0,
-      "tags": "",
-      "catalog": null,
-      "user": {
-        "id": 24,
-        "username": null,
-        "password": null,
-        "email": null,
-        "name": null,
-        "avatar": null,
-        "tag": null,
-        "description": null,
-        "phone": null,
-        "openid": null,
-        "created": null,
-        "score": "0",
-        "roles": null,
-        "enabled": true,
-        "authorities": null,
-        "accountNonLocked": true,
-        "credentialsNonExpired": true,
-        "accountNonExpired": true
-      },
-      "state": 1,
-      "updateTime": null,
-      "sourceType": null
-    }
-  ]
-}
+      {
+        "authority": "ROLE_MEMBER"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "username": "鸡蛋记得煎两面",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "email": "783328905@qq.com",
+    "name": "qq登录用户",
+    "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=wRgRU5OyibVk6f0sv07zib1Q&s=100&t=1568815596",
+    "tag": null,
+    "description": null,
+    "phone": null,
+    "openid": null,
+    "created": 1569504900000,
+    "score": "0",
+    "roles": [
+      {
+        "rid": 3,
+        "rname": "ROLE_USER",
+        "permissions": [],
+        "authority": "ROLE_USER"
+      }
+    ],
+    "accountNonExpired": false,
+    "accountNonLocked": false,
+    "credentialsNonExpired": false,
+    "enabled": true,
+    "authorities": [
+      {
+        "authority": "ROLE_USER"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "username": "星空",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "email": "783328905@qq.com",
+    "name": "qq登录用户",
+    "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=Mtn4zepcGT23DicYDWCc46Q&s=100&t=1557398621",
+    "tag": null,
+    "description": null,
+    "phone": null,
+    "openid": null,
+    "created": 1569509924000,
+    "score": "0",
+    "roles": [
+      {
+        "rid": 3,
+        "rname": "ROLE_USER",
+        "permissions": [],
+        "authority": "ROLE_USER"
+      }
+    ],
+    "accountNonExpired": false,
+    "accountNonLocked": false,
+    "credentialsNonExpired": false,
+    "enabled": true,
+    "authorities": [
+      {
+        "authority": "ROLE_USER"
+      }
+    ]
+  }
+]

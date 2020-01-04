@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -24,7 +25,7 @@ import java.util.List;
  */
 public class ExcelUtil {
     private static final Logger logger = LoggerFactory.getLogger(ExcelUtil.class);
-    public static<T> void toExcel(OutputStream outputStream, List<T> objs, String [] headers){
+    public static<T> void toExcel(HttpServletResponse response, List<T> objs, String [] headers){
         HSSFWorkbook workbook = new HSSFWorkbook();
         String fileName = "文章信息"+DateUtils.DateToString(new Date(),DateUtils.DATE_TO_STRING_SHORT_PATTERN)+ ".xls";
         HSSFSheet sheet = workbook.createSheet(fileName);
@@ -41,14 +42,18 @@ public class ExcelUtil {
         for(int i=0;i<asJsonArray.size();i++){
             row = sheet.createRow(i+1);
             JsonObject jsonObject = asJsonArray.get(i).getAsJsonObject();
-            for(int index =0;i<headers.length;i++){
+            for(int index =0;index<headers.length;index++){
                 row.createCell(index).setCellValue(jsonObject.get(headers[index])+"");
             }
         }
 
         try{
 
-            workbook.write(outputStream);
+            response.setContentType("application/octet-stream");
+            response.setHeader("Content-disposition", "attachment;filename=" + URLEncoder.encode(fileName,"utf-8"));
+            response.flushBuffer();
+            workbook.write(response.getOutputStream());
+            //workbook.close();
             logger.info("导出excel成功");
         }catch (Exception e){
             e.printStackTrace();

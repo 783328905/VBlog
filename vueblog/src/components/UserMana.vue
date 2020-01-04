@@ -161,6 +161,7 @@
       enabledChange(enabled, username,id,index){
         var dateString = '';
         var _this = this;
+        _this.cardloading.splice(index, 1, true);
         if(!enabled) {
           this.$prompt('请输入封禁时间', '提示', {
             confirmButtonText: '确定',
@@ -169,6 +170,36 @@
             inputErrorMessage: '时间格式不正确'
           }).then(({value}) => {
             dateString = value;
+            _this.cardloading.splice(index, 1, true);
+
+            putRequest("/admin/user/enabled", {
+              enabled: enabled,
+              username: username,
+              dateString: dateString
+            }).then(resp => {
+              if (resp.status != 200) {
+                _this.$message({type: 'error', message: '更新失败!'})
+               _this.loadOneUserById(id, index);
+                return;
+              }
+              _this.cardloading.splice(index, 1, false);
+              _this.$message({type: 'success', message: '更新成功!'})
+            });
+
+          }).catch(() => {
+            this.$message({
+              type: 'info',
+              message: '操作已取消'
+            });
+
+          });
+        }else {
+//          this.$confirm('解封该用户, 是否继续?', '提示', {
+//            confirmButtonText: '确定',
+//            cancelButtonText: '取消',
+//            type: 'warning'
+//          }).then(() => {
+
             _this.cardloading.splice(index, 1, true);
             putRequest("/admin/user/enabled", {
               enabled: enabled,
@@ -182,51 +213,17 @@
               }
               _this.cardloading.splice(index, 1, false);
               _this.$message({type: 'success', message: '更新成功!'})
-            }, resp => {
-              _this.$message({type: 'error', message: '更新失败!'})
-              _this.loadOneUserById(id, index);
-            });
-          }).catch(() => {
-            _this.cardloading.splice(index, 1, true);
-            this.$message({
-              type: 'info',
-              message: '操作已取消'
             });
 
-          });
-        }else {
-          this.$confirm('解封该用户, 是否继续?', '提示', {
-            confirmButtonText: '确定',
-            cancelButtonText: '取消',
-            type: 'warning'
-          }).then(() => {
-            _this.loading = true;
-            putRequest("/admin/user/enabled", {
-              enabled: enabled,
-              username: username,
-              dateString: dateString,
-            }).then(resp => {
-              if (resp.status != 200) {
-                _this.$message({type: 'error', message: '更新失败!'})
-                _this.loadOneUserById(id, index);
-                return;
-              }
-              //_this.cardloading.splice(index, 1, true);
-              _this.$message({type: 'success', message: '更新成功!'})
-            }, resp => {
-              _this.$message({type: 'error', message: '更新失败!'})
-              _this.loadOneUserById(id, index);
-            });
-          }).catch(() => {
-            _this.cardloading.splice(index, 1, true);
-            _this.$message({
-              type: 'info',
-              message: '已取消操作'
-            });
+//          }).catch(() => {
+//              _this.$message({
+//                type: 'info',
+//                message: '操作已取消'
+//              });
+//
+//            });
 
-          });
         }
-
       },
       loadRoles(index){
         var _this = this;

@@ -103,7 +103,7 @@ public class DateUtils {
 	 * @param: @return
 	 */
 	public static Timestamp getTimestamp() {
-		return new Timestamp(new Date().getTime());
+		return new Timestamp(System.currentTimeMillis());
 	}
 
 	public static Long dateStringToSeconds(String dateString){

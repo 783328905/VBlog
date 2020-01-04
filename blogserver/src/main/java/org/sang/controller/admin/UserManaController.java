@@ -40,9 +40,9 @@ public class UserManaController {
     @RequestMapping(value = "/user/enabled", method = RequestMethod.PUT)
     public RespBean updateUserEnabled(Boolean enabled, String username, String dateString) {
         if (userService.updateUserEnabled(enabled, username,dateString) == 1) {
-            return new RespBean("success", "该账户已被封停!");
+            return new RespBean("success", "操作成功!");
         } else {
-            return new RespBean("error", "封禁失败!");
+            return new RespBean("error", "操作失败!");
         }
     }
 
